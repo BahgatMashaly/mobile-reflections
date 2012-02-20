@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ThemeNumber</key>
+	<string></string>
+	<key>IsAutoLoginEnabled</key>
+	<false/>
+	<key>UserName</key>
+	<string></string>
+	<key>Password</key>
+	<string></string>
+	<key>status</key>
+	<string></string>
+	<key>LogMessage</key>
+	<false/>
+	<key>ServerLocation</key>
+	<string></string>
+	<key>ServerPort</key>
+	<integer>0</integer>
+	<key>SASL</key>
+	<false/>
+	<key>TLS</key>
+	<false/>
+</dict>
+</plist>

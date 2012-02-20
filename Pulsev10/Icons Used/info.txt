@@ -1,0 +1,40 @@
+Folder - Buttons
+
+File Name		Button size 	Use
+
+bg1.png		103 x 32		like Username button
+bg2.png		32 x 32		used for single icons like +
+bg3.png		63 x 32		like edit buttons
+bg4.png		91 x 32		theme
+bg5.png		41 x 21		delete button
+bg6.png		54 x 30		back button used in popups
+
+Folder - Weather Widgets
+
+arc.png		280 x 8		used as a top bg of widget backgrounds.
+bg.png		280 x 58		background for widgets. can be used as repeat y
+curve bottom.png	28 x 7		bottom curve of the widget background
+
+Folder - Post bg - Screen 5
+
+post bottom	445 x 10		used in reply post in screen5.
+post top		445 x 67		used as a background for post in center.
+
+Folder - Title
+
+center title.png	451 x 54		used for title bg of the center section
+main.png		1024 x 57		used for main title bg where Username, Screen name and Themes buttons 					are.
+subtitle.png	287 x 35		like Contacts List, Todays Weather etc.
+widget title.png	287 x 40		like Class A, Events, Buddies etc.
+
+Fonts Used
+
+1. Helvetica (Please note few titles, button texts etc. have a dropshadow effect around which can be checked in psd file)
+
+Colors used
+
+1. #fff (mostly for titles and important things including title, names etc.)
+2. #b9bdc6 (for post and chat messages)
+3. #f80000 - for busy status message
+4. #3caf19 - for Available status message
+5. #f27d00 - for Away status message

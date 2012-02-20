@@ -1,0 +1,150 @@
+//
+// Prefix header for all source files of the 'MobileJabber' target in the 'MobileJabber' project
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+	#import <AudioToolbox/AudioToolbox.h>
+	#import <CoreData/CoreData.h>
+	//#import "MobileJabberAppDelegate.h"
+	#import <MessageUI/MessageUI.h>
+	#import <SystemConfiguration/SystemConfiguration.h>
+	#import "MobileJabberAppDelegate.h"
+	#import "XMPP.h"
+	#import "XMPPRosterCoreDataStorage.h"
+	#import "XMPPvCardAvatarModule.h"
+	#import "XMPPvCardCoreDataStorageController.h"
+	#import "XMPPvCardTempModule.h"
+	#import "XMPPResourceCoreDataStorage.h"	
+	#import "XMPPResource.h"
+	#import "XMPPRoom.h"	
+	#import "XMPPUser.h"
+	#import <CFNetwork/CFNetwork.h>
+	#import "XMPPRoster.h"
+	#import "LoadingAlert.h"
+	#import "JImage.h"
+
+
+	#define REGISTER_URL @"http://localhost:9090/plugins/userService/userservice?type=add&secret=GL20ao5U&username=%@&password=%@&name=%@&email=%@"
+	#define FORGOT_PASSWORD_URL @"http://localhost:9090/plugins/userService/userservice?type=update&secret=GL20ao5U&username=%@&password=%@"
+	#define REGISTER_NOTIFICATION @"REGISTER_NOTIFICATION"
+	#define FORGOTPASSWORD_NOTIFICATION @"FORGOT_PASSWORD_NOTIFICATION"
+//	#define HOSTNAME @"175.41.188.213"
+	#define HOSTNAME @"mqspectrum.zapto.org"
+//	#define HOSTNAME @"192.168.1.109"
+	#define SERVERNAME @"mqcommunicator"
+//	#define SERVERNAME @"localhost.localdomain"
+//	#define PORTNUMBER 5222
+    #define PORTNUMBER 5222
+	#define NOTIFICATION_SHOW_CONTACTLIST @"SHOW_CONTACTLIST"
+
+	#define NOTIFICATION_LOGIN_SUCCESSFUL @"LOGIN_SUCCESSFUL"
+	#define NOTIFICATION_SEARCH_USER @"SEARCH_USER"
+	#define FONT_NAME @"Helvetica"
+	#define BOLD_FONT_NAME @"Helvetica-Bold"
+	#define FONT_SIZE 17.0
+    #define CHAT_FONT_SIZE 15.0
+    #define CHAT_BODY_FONT_SIZE 12.0
+
+    #define SOCIAL_FEEDS_REFRESH_TIMEOUT 180
+
+	#define NOTIFICATION_FRIEND_REQUESTS @"FRIEND_REQUESTS"
+	#define NOTIFICATION_ACCEPT_REJECT_FRIEND_REQUESTS @"ACCEPT_REJECT_FRIEND_REQUESTS"
+	#define NOTIFICATION_RELOAD_CONTACTS @"RELOAD_CONTACTS"
+	#define NOTIFICATION_LOGOUT @"USER_LOGOUT"
+
+	#define NSNOTIFICATION_CHANGE_APPLICATION_THEME @"CHANGE_APP_THEME"
+	#define NSNOTIFICATION_SHOW_CHAT @"SHOW_CHAT"
+	#define NSNOTIFICATION_SHOW_HOME @"SHOW_HOME"
+	#define NSNOTIFICATION_ADD_ACTIVEUSERS "ADD_ACTIVE_USERS"
+	#define NSNOTIFICATION_UPDATE_ACTIVECHATUSERS @"UPDATE_ACTIVECHAT_USERS"
+    #define NSNOTIFICATION_UPDATE_ACTIVEPOLL @"UPDATE_ACTIVE_POLL"
+
+	#define NSNOTIFICATION_SHOW_CHAT_WINDOW @"SHOW_CHAT_WINDOW"
+    #define NSNOTIFICATION_SHOW_POLL_WINDOW @"SHOW_POLL_WINDOW"
+
+	#define NSNOTIFICATION_SHOW_EVENTS @"SHOW_EVENTS"
+	#define NSNOTIFICATION_USER_AVTAR @"USER_AVTAR"
+	#define GET_COUNTRYLIST_URL @"http://www.webservicex.net/country.asmx/GetCountries"
+	#define GET_CITY_BY_COUNTRY_URL @"http://www.webservicex.net/globalweather.asmx"
+	#define GOOGLE_WEATHER_URL @"http://www.google.com/ig/api?weather="
+
+	#define NOTIFICATION_SHOW_COUNTRYLIST @"SHOW_COUNTRYLIST"
+	#define NOTIFICATION_COUNTRY_SELECTED @"COUNTRY_SELECTED"
+	#define NSNOTIFICATION_SHOW_CITYLIST @"SHOW_CITYLIST"
+	#define NSNOTIFICATION_CITY_SELECTED @"CITY_SELECTED"
+	#define NSNOTIFICATION_COUNTRY_CITY_SELECTED @"COUNTRY_CITY_SELECTED"
+	#define NSNOTIFICATION_SHOW_TODAYS_WEATHER @"SHOW_TODAYS_WEATHER"
+	#define DEFAULT_LOCATION @"Singapore"
+	#define NSNOTIFICATION_ADDEVENT @"ADD_EVENT"
+	#define NSNOTIFICATION_DRAW_NAVIGATIONBAR @"DRAW_NAVIGATIONBAR"
+	#define NSNOTIFICATION_FILEACTION @"FILE_ACTION"
+	#define RESOURCES @"Messenger"
+	#define NSNOTIFICATION_CLOSE_MENU @"CLOSE_MENU"
+	#define NSNOTIFICATION_CLOSE_THEME @"CLOSE_THEME"
+	#define NSNOTIFICATION_CLOSE_PROFILE @"CLOSE_PROFILE"
+    #define NSNOTIFICATION_SEND_RESPONDS @"POLL_SEND_RESPONDS"
+
+	#define NSNOTIFICATION_SELECTED_MENU_ITEM @"SELECTED_MENU_ITEM"
+	#define LEARNING_CENTER_URL @"https://learnet.ns.sg/"
+	#define NSNOTIFICATION_SHOW_USER_OPTIONS @"showUserOption"
+	#define NSNOTIFICATION_SHOW_GROUP_OPTIONS @"showGroupOption"
+	#define NSNOTIFICATION_USER_OPTION_SELECTED @"userOptionSelected"
+	#define NSNOTIFICATION_GROUP_OPTION_SELECTED @"groupOptionSelected"
+	#define NSNOTIFICATION_CHAT_FROM_USER_OPTION @"chatFromUserOptiopn"
+	#define NSNOTIFICATION_FILE_SENDING_FROM_USER_OPTION @"fileSendingFromUserOptiopn"
+	#define NSNOTIFICATION_FILE_TANSFER_FROM_USER_OPTION @"FileTransferFromUserOption"
+	#define NSNOTIFICATION_CONTACT_INFO_FROM_USER_OPTION @"contactInfoFromUserOption"
+	#define NSNOTIFICATION_EMAIL_FROM_USER_OPTION @"emailFromUserOptiopn"
+	#define NSNOTIFICATION_GROUP_CHAT_FROM_GROUP_OPTION @"groupChatFromGroupOptiopn"
+    #define NSNOTIFICATION_POLL_FROM_GROUP_OPTION @"pollFromGroupOptiopn"
+    #define NSNOTIFICATION_ASSESSMENT_FROM_GROUP_OPTION @"assessmentFromGroupOptiopn"
+    #define NSNOTIFICATION_PROGRESSTRACK_FROM_GROUP_OPTION @"progressFromGroupoption"
+	#define NSNOTIFICATION_SHOW_PROFILE @"SHOW_PROFILE"
+	#define NSNOTIFICATION_SERVER_CONFIG_CHANGE @"ServerConfigChange"
+	#define NSSNOTIFICATION_EDIT_PROFILE_SUCCEED @"editProfileSucceed"
+	#define NSNOTIFICATION_SET_USER_FULL_NAME @"setFullName"
+    #define NSNOTIFICATION_UPDATE_SOCIALFEEDS @"updateSocialFeeds"
+	#define NSNOTIFICATION_CLOSE_UPDATE_STATUS @"UpdatePresenceStatus"
+
+	#define NSNOTIFICATION_SEND_POLL_TO_STUDENTS @"sendToStudents"
+
+	#define NSNOTIFICATION_GROUP_FILE_FROM_GROUP_OPTION @"groupFileSendingView"
+
+	#define FILE_SENDING_TEXT @"fileSending"
+	#define GROUP_FILE_SENDING_TEXT @"groupFileSending"
+	#define NSNOTIFICATION_SHOW_TRANSFERED_IMAGE @"fileSending"
+	//#define URL_FILE_SENDING_WEBSERVICE @"http://mqspectrum.zapto.org/iPadUpload.aspx?filename="
+	//#define URL_FILE_SENDING_WEBSERVICE @"http://" HOSTNAME ":80/iPadUpload.aspx?filename="
+	#define URL_FILE_SENDING_WEBSERVICE @"/pulse/iPadUpload.aspx?filename="
+    #define URL_SOCIALFEED_WEBSERVICE @"/pulse/iPadSocialFeeds.aspx?userid="
+    #define URL_POLLRESULTS_WEBSERVICE @"/pulse/iPadPollReportList.aspx?userid="
+    #define URL_ADHOCPOLL_REPORT_WEBSERVICE @"/pulse/iPadPollReportUI.aspx?id="
+    #define URL_ASSESSMENT_WEBSERVICE @"/pulse/game.htm"
+    #define URL_FILETRANSFER_LOCATION @"/pulse/resource/"
+
+    #define INSTRUCTOR_IMAGE    [UIImage imageNamed:@"instructor.jpg"];
+    #define STUDENT_IMAGE       [UIImage imageNamed:@"student.jpg"];
+    #define USEJPEGCOMPRESSION 1
+    #define JPEGCOMPRESSION 0.3
+
+    // 0 - Direct, 1 - HTTPS
+    #define CONNECTION_MODE 0
+    // Company 1 - BMTC
+    #define COMPANY 1
+    #define COMPANY1_SERVER @"172.24.250.75"
+    #define HTTPS_WEB_SERVER @"https://172.24.250.35"
+
+    #define ISDEVELOPMENT 1
+    #define ISENCRYPTED 1
+
+//Added by Gaurav
+    #define USERDEFINEDIMAGES 1
+
+#endif
