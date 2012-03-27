@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PulseNew">
+</Property><Property Name="Solution File" Value="C:\work\webservice\PulseNew2\PulseNew\PulseNew\PulseNew.sln">
+</Property><Property Name="User Options File" Value="C:\work\webservice\PulseNew2\PulseNew\PulseNew\PulseNew.suo">
+</Property><Property Name="Date" Value="Thursday, November 10, 2011">
+</Property><Property Name="Time" Value="18:52 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="PulseNew.sln" Description="File successfully backed up as C:\work\webservice\PulseNew2\PulseNew\PulseNew\Backup\PulseNew.sln">
+</Event><Event ErrorLevel="0" Project="" Source="PulseNew.suo" Description="File successfully backed up as C:\work\webservice\PulseNew2\PulseNew\PulseNew\Backup\PulseNew.suo">
+</Event><Event ErrorLevel="1" Project="PulseNew" Source="..\PulseNew" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="" Source="PulseNew.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PulseNew.sln" Description="Converted">
+</Event></UpgradeLog>
