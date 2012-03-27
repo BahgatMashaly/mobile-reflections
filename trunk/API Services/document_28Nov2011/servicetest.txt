@@ -1,0 +1,85 @@
+Reflections API Validation
+
+Method
+--------
+public string getReflectionsSummary(string userid, string ticket, string monthyear, bool isPublic)
++ getReflectionsSummary('victor', 'xxx', '201107', true);
+
+<string xmlns="http://tempuri.org/"><result><reflections><reflection><id>1</id><title>test title</title><date>7/27/2011 12:09:28 PM</date><access>Public</access><comments>2</comments><rating>2.0000</rating></reflection><reflection><id>2</id><title>Test Title</title><date>7/27/2011 12:10:07 PM</date><access>Public</access><comments>1</comments><rating>3.0000</rating></reflection><reflection><id>3</id><title>Update title</title><date>7/27/2011 1:12:36 PM</date><access>Public</access><comments>0</comments><rating>0</rating></reflection></reflections></result></string>
+
+Method
+--------
+public string getReflection(string userid, string ticket, string reflectionid, string ispublic)
++ getReflection ('victor', 'xxx', 1, true);
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result><reflections><reflection><id>1</id><title>test title</title><access>Public</access><reflectiondata >test data</reflectiondata><comments>2</comments><rating>2.0000</rating></reflection></reflections></result></string>
+
+Method
+-------
+public string getReflectionComment(string userid, string ticket, string reflectionid)
++ getReflectionComment('victor', 'xxx', 1)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result><comments><comment><userid>victor</userid><comment>Testing the comments.</comment><rating>0</rating><createddate></createddate><attachments><attachment><attachmentid>1</attachmentid><attahcmentname>Some Attachment</attachmentname><attahcmentguid>1234-1234-1234-1234.pdf</attachmentguid></attachment></attachments></comment><comment><userid>victor</userid><comment>Some other comment</comment><rating>4</rating><createddate></createddate><attachments><attachment><attachmentid>1</attachmentid><attahcmentname>Some Attachment</attachmentname><attahcmentguid>1234-1234-1234-1234.pdf</attachmentguid></attachment></attachments></comment></comments></
+
+Method
+-------
+public string addReflectionComment(string reflectionid, string reflectioncommentid, string userid, string ticket, string content)
++ addReflectionComment(1, 0, 'victor', 'xxx', 'This is my comment')
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>4</result></string>
+
+Method
+-------
+public string saveReflection(string userid, string ticket, string id, string title, string content, bool isPrivate)
++ saveReflection('victor', 'xxx', 0, string title, string content, bool isPrivate)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>4</result></string>
+
+Method
+-------
+public string deleteReflection(string userid, string ticket, int reflectionid)
++ deleteReflection('victor', 'xxx', 4)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>true</result></string>
+
+
+Method
+-------
+public string saveReflectionAttachment(string userid, string ticket, string reflectionid, string name, string guid)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>3</result></string>
+
+Method
+-------
+public string markPrivate(string userid, string ticket, string reflectionid)
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>true</result></string>
+
+Method
+------
+public string deleteReflectionAttachment(string userid, string ticket, string attachmentid)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>true</result></string>
+
+Method
+-------
+public string deleteReflectionComment(string userid, string ticket, string commentid)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>true</result></string
+
+Method
+-------
+public string saveReflectionCommentAttachment(string userid, string ticket, string filename, string commentid)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<string xmlns="http://tempuri.org/"><result>true</result></string>

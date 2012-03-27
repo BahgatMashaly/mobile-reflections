@@ -1,0 +1,38 @@
+CREATE TABLE `reflection` (
+  `reflectionid` bigint(20) NOT NULL auto_increment,
+  `userid` varchar(50) collate utf8_unicode_ci NOT NULL,
+  `title` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  `createddate` datetime NOT NULL,
+  `content` text collate utf8_unicode_ci,
+  `access` varchar(15) collate utf8_unicode_ci default NULL,
+  `isdeleted` smallint(6) default '0',
+  PRIMARY KEY  (`reflectionid`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `reflectionattachment` (
+  `reflectionattachmentid` bigint(20) NOT NULL auto_increment,
+  `reflectionid` bigint(20) default NULL,
+  `attachmentname` varchar(200) collate utf8_unicode_ci default '',
+  `attachmentguid` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  PRIMARY KEY  (`reflectionattachmentid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `reflectioncomment` (
+  `reflectioncommentid` bigint(20) NOT NULL auto_increment,
+  `reflectionid` varchar(50) collate utf8_unicode_ci NOT NULL,
+  `userid` varchar(50) collate utf8_unicode_ci NOT NULL default '',
+  `comment` text collate utf8_unicode_ci,
+  `rating` int(11) default '0',
+  `createddate` datetime default NULL,
+  `isdeleted` smallint(6) default '0',
+  PRIMARY KEY  (`reflectioncommentid`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
+CREATE TABLE `reflectioncommentattachment` (
+  `reflectioncommentattachid` bigint(20) NOT NULL auto_increment,
+  `reflectioncommentid` bigint(20) NOT NULL,
+  `attachmentname` varchar(255) collate utf8_unicode_ci NOT NULL default '',
+  `attachmentguid` varchar(50) collate utf8_unicode_ci default NULL,
+  PRIMARY KEY  (`reflectioncommentattachid`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
+
