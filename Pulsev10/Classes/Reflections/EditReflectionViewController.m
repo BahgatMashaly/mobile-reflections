@@ -1,14 +1,26 @@
 //
-//  CreateReflectionViewController.m
-//  MobileReflections
+//  EditReflectionViewController.m
+//  MobileJabber
 //
-//  Created by SonNT on 11/21/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Phan Ba Minh on 4/3/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CreateReflectionViewController.h"
+#import "EditReflectionViewController.h"
 
-@implementation CreateReflectionViewController
+@implementation EditReflectionViewController
+
+- (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array {
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        appDelegate = (MobileJabberAppDelegate *)[[UIApplication sharedApplication] delegate];
+        viewIndex = 1000;
+        
+        self.view.frame = rect;
+    }
+    return self;
+}
 
 - (UIImage *)renderToSave
 {
@@ -18,11 +30,6 @@
 	UIGraphicsEndImageContext();
 	
 	return [newImage retain];
-}
-
-- (IBAction)clickCancel:(id)sender
-{
-	[self dismissModalViewControllerAnimated:NO];
 }
 
 - (void)hideToolbars
@@ -111,14 +118,14 @@
 	[dateFormat setDateFormat:@"EEEE MMMM d, YYYY"]; //example : Saturday November 22, 2008
 	NSString *aDate = [dateFormat stringFromDate:date];  
 	[dateFormat release];
-
+    
 	int max = [common findMax:[[appDelegate objOutput] arrReflectionList]] + 1;
 	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], nil];
 	[[[appDelegate objOutput] arrReflectionList] addObject:arrObject];
 	
 	//save objText to arrReflectionContent
 	[self saveObjectContent:max];
-
+    
 	[self dismissModalViewControllerAnimated:NO];
 }
 
@@ -142,7 +149,7 @@
 {
 	viewIndex = viewIndex + 1;
 	CGRect frame = CGRectMake(100, 100, 400, 300);
-
+    
 	TextNoteViewController *vc = [[TextNoteViewController alloc] initWithNibName:@"TextNoteViewController" bundle:nil];
 	[vc.view setFrame:frame];
 	[vc.view setTag:viewIndex];
@@ -287,7 +294,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        m_ArrayComponents = [NSMutableArray new];
     }
     return self;
 }
@@ -311,10 +317,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	appDelegate = (MobileJabberAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [txtTitle becomeFirstResponder];
-	viewIndex = 1000;
 }
 
 - (void)viewDidUnload
@@ -353,7 +355,7 @@
 - (void)addBackground:(int)vIndex imgSource:(UIImage *)imgSource
 {
 	[self deleteBackground];
-
+    
 	UIImageView *img = [[UIImageView alloc] initWithImage:imgSource];
 	[img setTag:vIndex];
 	[img setFrame:[viewFreeEditor bounds]];

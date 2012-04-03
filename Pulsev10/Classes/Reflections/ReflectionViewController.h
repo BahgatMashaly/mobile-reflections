@@ -12,6 +12,7 @@
 #import "CalendarViewController.h"
 #import "CreateReflectionViewController.h"
 #import "CommentViewController.h"
+#import "EditReflectionViewController.h"
 
 #import "KLCalendarView.h"
 #import "CheckmarkTile.h"
@@ -20,27 +21,29 @@
 
 @interface ReflectionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPopoverControllerDelegate, KLCalendarViewDelegate>
 {
-	MobileJabberAppDelegate *appDelegate;
+	MobileJabberAppDelegate                     *appDelegate;
 
-	IBOutlet UISegmentedControl *segSelection;
-	IBOutlet UIView *viewCalendar;
-	IBOutlet UITableView *tblReflectionList;
+	IBOutlet UISegmentedControl                 *segSelection;
+	IBOutlet UIView                             *viewCalendar;
+	IBOutlet UITableView                        *tblReflectionList;
 	
-	IBOutlet UILabel *lblTitleOfReflection;
-	IBOutlet UILabel *lblDateOfReflection;
-	IBOutlet UIImageView *imgContent;
-	IBOutlet UIImageView *imvBackgroundImage;
+	IBOutlet UILabel                            *lblTitleOfReflection;
+	IBOutlet UILabel                            *lblDateOfReflection;
+	IBOutlet UIImageView                        *imgContent;
+	IBOutlet UIImageView                        *imvBackgroundImage;
 	
-	IBOutlet UIImageView * imvUserProfile;
-	IBOutlet UILabel * lblUserName;
+	IBOutlet UIImageView                        *imvUserProfile;
+	IBOutlet UILabel                            *lblUserName;
 	
-	int reflection_id;
+	int                                         reflection_id;
 	
-	NSDate *selectedDate;
-	KLCalendarView *calendarView;
-	BOOL isMonthView;
+	NSDate                                      *selectedDate;
+	KLCalendarView                              *calendarView;
+	BOOL                                        isMonthView;
 	
-	UIPopoverController *aPopover;
+	UIPopoverController                         *aPopover;
+    
+    EditReflectionViewController                *m_EditVC;
 }
 
 - (IBAction)clickBtnCalendar:(id)sender;
