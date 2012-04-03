@@ -7,6 +7,7 @@
 //
 
 #import "ReflectionViewController.h"
+#import "Define.h"
 
 @implementation ReflectionViewController
 
@@ -351,14 +352,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSArray *item = [[[appDelegate objOutput] arrReflectionList] objectAtIndex:[indexPath row]];
-	reflection_id = [[item objectAtIndex:0] intValue];
-	//NSLog(@"imgPath : %@", [item objectAtIndex:2]);
-	
-	[lblTitleOfReflection setText:[item objectAtIndex:1]];
-	[lblDateOfReflection setText:[item objectAtIndex:4]];
-	[imgContent setImage:[UIImage imageWithContentsOfFile:[item objectAtIndex:2]]];
-	//[imgContent setImage:[UIImage imageWithContentsOfFile:[item objectAtIndex:2]] forState:UIControlStateNormal];
+//	NSArray *item = [[[appDelegate objOutput] arrReflectionList] objectAtIndex:[indexPath row]];
+//	reflection_id = [[item objectAtIndex:0] intValue];
+//	//NSLog(@"imgPath : %@", [item objectAtIndex:2]);
+//	
+//	[lblTitleOfReflection setText:[item objectAtIndex:1]];
+//	[lblDateOfReflection setText:[item objectAtIndex:4]];
+//	[imgContent setImage:[UIImage imageWithContentsOfFile:[item objectAtIndex:2]]];
+//	//[imgContent setImage:[UIImage imageWithContentsOfFile:[item objectAtIndex:2]] forState:UIControlStateNormal];
+    
+    
+    RELEASE_SAFE(m_EditVC);
+    m_EditVC = [[EditReflectionViewController alloc] initWithFrame:imgContent.frame andArrayData:nil];
+    [self.view addSubview:m_EditVC.view];
 }
 
 #pragma mark -

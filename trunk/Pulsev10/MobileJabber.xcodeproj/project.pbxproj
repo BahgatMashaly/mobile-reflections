@@ -213,6 +213,9 @@
 		50FEED82149A295C00EFF5E7 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FEED81149A295C00EFF5E7 /* CommentCell.m */; };
 		92877873143F2E84006100DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92877872143F2E84006100DB /* QuartzCore.framework */; };
 		92877875143F2E8F006100DB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92877874143F2E8F006100DB /* MediaPlayer.framework */; };
+		D79E67CE152AF7FA00CB1B8F /* EditReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E67CC152AF7FA00CB1B8F /* EditReflectionViewController.m */; };
+		D79E67CF152AF7FA00CB1B8F /* EditReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79E67CD152AF7FA00CB1B8F /* EditReflectionViewController.xib */; };
+		D79E67DD152AFF8500CB1B8F /* SupportFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E67DC152AFF8500CB1B8F /* SupportFunction.m */; };
 		E3031FC013AA97BA00EB7DB4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3031FBE13AA97BA00EB7DB4 /* LoginViewController.m */; };
 		E3031FC113AA97BA00EB7DB4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3031FBF13AA97BA00EB7DB4 /* LoginViewController.xib */; };
 		E3031FCC13AA98FB00EB7DB4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3031FCB13AA98FB00EB7DB4 /* MainWindow.xib */; };
@@ -752,6 +755,12 @@
 		92877872143F2E84006100DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		92877874143F2E8F006100DB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		92877876143F2EDD006100DB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		D79E67CB152AF7FA00CB1B8F /* EditReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditReflectionViewController.h; sourceTree = "<group>"; };
+		D79E67CC152AF7FA00CB1B8F /* EditReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditReflectionViewController.m; sourceTree = "<group>"; };
+		D79E67CD152AF7FA00CB1B8F /* EditReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditReflectionViewController.xib; sourceTree = "<group>"; };
+		D79E67DA152AFF8500CB1B8F /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		D79E67DB152AFF8500CB1B8F /* SupportFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportFunction.h; sourceTree = "<group>"; };
+		D79E67DC152AFF8500CB1B8F /* SupportFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportFunction.m; sourceTree = "<group>"; };
 		E3031FBD13AA97BA00EB7DB4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E3031FBE13AA97BA00EB7DB4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E3031FBF13AA97BA00EB7DB4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -1114,6 +1123,7 @@
 				E303226C13AAAB2300EB7DB4 /* URLRequestHandler */,
 				E3031FC313AA97CB00EB7DB4 /* LoginScreen */,
 				E3031FC213AA97BE00EB7DB4 /* Application Delegate */,
+				D79E67D1152AFF2900CB1B8F /* 04_SUPPORT */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1597,6 +1607,9 @@
 				50F1E4D5148BD98C007FE5CD /* Views */,
 				50F1E4A9148BD98C007FE5CD /* common.h */,
 				50F1E4AA148BD98C007FE5CD /* common.m */,
+				D79E67CB152AF7FA00CB1B8F /* EditReflectionViewController.h */,
+				D79E67CC152AF7FA00CB1B8F /* EditReflectionViewController.m */,
+				D79E67CD152AF7FA00CB1B8F /* EditReflectionViewController.xib */,
 				50F1E4AB148BD98C007FE5CD /* CreateReflectionViewController.h */,
 				50F1E4AC148BD98C007FE5CD /* CreateReflectionViewController.m */,
 				50F1E4AD148BD98C007FE5CD /* CreateReflectionViewController.xib */,
@@ -1752,6 +1765,16 @@
 				50F1E4DB148BD98C007FE5CD /* TextNoteView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D79E67D1152AFF2900CB1B8F /* 04_SUPPORT */ = {
+			isa = PBXGroup;
+			children = (
+				D79E67DA152AFF8500CB1B8F /* Define.h */,
+				D79E67DB152AFF8500CB1B8F /* SupportFunction.h */,
+				D79E67DC152AFF8500CB1B8F /* SupportFunction.m */,
+			);
+			path = 04_SUPPORT;
 			sourceTree = "<group>";
 		};
 		E3031FC213AA97BE00EB7DB4 /* Application Delegate */ = {
@@ -3008,6 +3031,7 @@
 				50B272BF14EA54AF00BC4C35 /* videos_32.png in Resources */,
 				50B272C114EA56EF00BC4C35 /* Apps_background_32.png in Resources */,
 				50A9F08414EB73B500E2B38F /* note_bg.png in Resources */,
+				D79E67CF152AF7FA00CB1B8F /* EditReflectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3162,6 +3186,8 @@
 				5080554614A70486008043E2 /* CalendarViewController.m in Sources */,
 				50DA7A7F14AC7C30009C2F8D /* objText.m in Sources */,
 				50B272AC14EA180D00BC4C35 /* PostItViewController.m in Sources */,
+				D79E67CE152AF7FA00CB1B8F /* EditReflectionViewController.m in Sources */,
+				D79E67DD152AFF8500CB1B8F /* SupportFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
