@@ -292,13 +292,13 @@
         LOG_RETAIN_COUNT(mem);
         
         if ([[[mem class] description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_PAINT_NOTE]]) {
-
+            [viewFreeEditor addSubview:mem.view];
         }
         else if ([[[mem class] description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_POST_IT]]) {
             viewIndex = viewIndex + 1;
             int vIndex = viewIndex + 4000;
             
-            PostItViewController *postItVC = [[PostItViewController alloc] initWithNibName:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_POST_IT] bundle:nil];
+            PostItViewController *postItVC = [[PostItViewController alloc] initWithText:[(PostItViewController *)mem getText]];
             [postItVC.view setTag:vIndex];
             postItVC.view.frame = mem.view.frame;
             [viewFreeEditor addSubview:postItVC.view];
@@ -310,8 +310,8 @@
         }
         else if ([[[mem class] description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_TEXT_NOTE]]) {
             viewIndex = viewIndex + 1;
-            
-            TextNoteViewController *textNoteVC = [[TextNoteViewController alloc] initWithNibName:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_TEXT_NOTE] bundle:nil];
+            TextNoteViewController *tempVC = (TextNoteViewController *)mem;
+            TextNoteViewController *textNoteVC = [[TextNoteViewController alloc] initWithTextView:tempVC.txtContent];
             [textNoteVC.view setFrame:mem.view.frame];
             [textNoteVC.view setTag:viewIndex];
             
@@ -323,7 +323,6 @@
         else { 
             [viewFreeEditor addSubview:mem.view];
         }
-        
     }
     
     self.view.frame = m_RectFrame;
