@@ -14,7 +14,14 @@
 #define minHeight 60
 
 @implementation TextNoteViewController
-@synthesize strContent, fontColor, fontName, fontSize;
+@synthesize txtContent;
+- (id)initWithTextView:(UITextView *)textView {
+    self = [super init];
+    if (self) {
+        m_TextViewInit = [textView retain];
+    }
+    return self;
+}
 
 - (void)setSelectedColor:(UIColor *)selectedColor
 {
@@ -70,6 +77,8 @@
 - (void)hideTools
 {
 	[toolbar setHidden:YES];
+    [imgTextBG setHidden:YES];
+	[imgResize setHidden:YES];
 	[txtContent setUserInteractionEnabled:NO];
 }
 
@@ -101,13 +110,13 @@
 {
 	[self hideTools];
 
-	[imgTextBG setHidden:YES];
-	[imgResize setHidden:YES];
-	
-	strContent = [NSString stringWithString:[txtContent text]];
-	fontColor = [txtContent textColor];
-	fontName = [NSString stringWithString:[txtContent.font fontName]];
-	fontSize = [txtContent.font pointSize];
+//	[imgTextBG setHidden:YES];
+//	[imgResize setHidden:YES];
+    
+//    strContent = [NSString stringWithString:[txtContent text]];
+//	fontColor = [txtContent textColor];
+//	fontName = [NSString stringWithString:[txtContent.font fontName]];
+//	fontSize = [txtContent.font pointSize];
 }
 
 - (IBAction)clickColor:(id)sender
@@ -255,9 +264,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self fixPosition];
-	[self setContentFrame];
-	[txtContent becomeFirstResponder];
+    
+    if (m_TextViewInit) {
+        txtContent.text = m_TextViewInit.text;
+        txtContent.textColor = m_TextViewInit.textColor;
+        [txtContent setFont:[UIFont fontWithName:m_TextViewInit.font.fontName size:m_TextViewInit.font.pointSize]];
+        
+        [self hideTools];
+    }
+    else {
+        [self fixPosition];
+        [self setContentFrame];
+        [txtContent becomeFirstResponder];
+    }
 }
 
 - (void)viewDidUnload
@@ -269,14 +288,12 @@
 
 - (void)dealloc
 {
-	RELEASE_SAFE(strContent);
-	RELEASE_SAFE(fontColor);
-	RELEASE_SAFE(fontName);
 	RELEASE_SAFE(aPopover);
     RELEASE_SAFE(imgTextBG);
     RELEASE_SAFE(imgResize);
     RELEASE_SAFE(txtContent);
     RELEASE_SAFE(toolbar);
+    RELEASE_SAFE(m_TextViewInit);
     
 	[super dealloc];
 }

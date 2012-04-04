@@ -10,10 +10,13 @@
 
 @interface PostItViewController : UIViewController
 {
-	IBOutlet UIImageView *imgNoteBG;
-	IBOutlet UITextView *txtContent;
+	IBOutlet UIImageView                *imgNoteBG;
+	IBOutlet UITextView                 *txtContent;
 	
-	CGPoint touchStart;
+	CGPoint                             touchStart;
+    
+    NSString                            *m_StringText;
 }
-
+- (id)initWithText:(NSString *)strText;
+- (NSString *)getText;
 @end

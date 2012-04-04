@@ -11,6 +11,18 @@
 
 @implementation PostItViewController
 
+- (id)initWithText:(NSString *)strText {
+    self = [super init];
+    if (self) {
+        m_StringText = [strText retain];
+    }
+    return self;
+}
+
+- (NSString *)getText {
+    return txtContent.text;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	touchStart = [[touches anyObject] locationInView:self.view];
@@ -78,12 +90,19 @@
 - (void)dealloc {
     RELEASE_SAFE(imgNoteBG);
     RELEASE_SAFE(txtContent);
+    RELEASE_SAFE(m_StringText);
+    
     [super dealloc];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [txtContent becomeFirstResponder];
+    
+    if (m_StringText) {
+        txtContent.text = m_StringText;
+    }
+    else
+        [txtContent becomeFirstResponder];
 }
 
 - (void)viewDidUnload

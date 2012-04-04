@@ -63,24 +63,24 @@
 
 - (void)saveObjectContent:(int)aReflection_id
 {
-	for (UIView *view in viewFreeEditor.subviews)
-	{
-		if ([view tag] > 1000)
-		{
-			if ([view tag] < 2000)
-			{
-				//save TextView to arrReflectionContent : id, reflection_id, objContent, objType
-				TextNoteViewController *vc = [[TextNoteViewController alloc] init];
-				vc.view = view;
-				
-				objText *objContent = [[objText alloc] initWithFrame:[view frame] content:[vc strContent] tag:[view tag] fontColor:[vc fontColor] fontName:[vc fontName] fontSize:[vc fontSize]];
-				
-				int max = [common findMax:[[appDelegate objOutput] arrReflectionContent]] + 1;
-				NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [NSNumber numberWithInt:aReflection_id], objContent, @"TextView", nil];
-				[[[appDelegate objOutput] arrReflectionContent] addObject:arrObject];
-			}
-		}
-	}
+//	for (UIView *view in viewFreeEditor.subviews)
+//	{
+//		if ([view tag] > 1000)
+//		{
+//			if ([view tag] < 2000)
+//			{
+//				//save TextView to arrReflectionContent : id, reflection_id, objContent, objType
+//				TextNoteViewController *vc = [[TextNoteViewController alloc] init];
+//				vc.view = view;
+//				
+//				objText *objContent = [[objText alloc] initWithFrame:[view frame] content:[vc strContent] tag:[view tag] fontColor:[vc fontColor] fontName:[vc fontName] fontSize:[vc fontSize]];
+//				
+//				int max = [common findMax:[[appDelegate objOutput] arrReflectionContent]] + 1;
+//				NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [NSNumber numberWithInt:aReflection_id], objContent, @"TextView", nil];
+//				[[[appDelegate objOutput] arrReflectionContent] addObject:arrObject];
+//			}
+//		}
+//	}
 }
 
 - (void)editReflection:(int)aReflectionID

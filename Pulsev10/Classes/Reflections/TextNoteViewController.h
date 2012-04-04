@@ -14,26 +14,22 @@
 
 @interface TextNoteViewController : UIViewController <UIPopoverControllerDelegate, ColorPickerViewControllerDelegate, FontPickerViewControllerDelegate, SizeViewControllerDelegate>
 {
-	IBOutlet UIImageView *imgTextBG;
-	IBOutlet UIImageView *imgResize;
-	IBOutlet UITextView *txtContent;
-	IBOutlet UIToolbar *toolbar;
-	
-	NSString *strContent;
-	UIColor *fontColor;
-	NSString *fontName;
-	CGFloat fontSize;
+	IBOutlet UIImageView                    *imgTextBG;
+	IBOutlet UIImageView                    *imgResize;
+	IBOutlet UITextView                     *txtContent;
+	IBOutlet UIToolbar                      *toolbar;
 
 	CGPoint touchStart;
 	BOOL isResizing;
 	
-	UIPopoverController *aPopover;
+	UIPopoverController                     *aPopover;
+    
+    UITextView                              *m_TextViewInit;
 }
 
-@property (nonatomic, retain) NSString *strContent;
-@property (nonatomic, retain) UIColor *fontColor;
-@property (nonatomic, retain) NSString *fontName;
-@property CGFloat fontSize;
+@property (nonatomic, retain) UITextView *txtContent;
+
+- (id)initWithTextView:(UITextView *)textView ;
 
 - (IBAction)clickDelete:(id)sender;
 - (IBAction)clickDone:(id)sender;
