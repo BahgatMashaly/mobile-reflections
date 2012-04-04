@@ -7,6 +7,7 @@
 //
 
 #import "EditReflectionViewController.h"
+#import "Define.h"
 
 @implementation EditReflectionViewController
 
@@ -17,9 +18,16 @@
         appDelegate = (MobileJabberAppDelegate *)[[UIApplication sharedApplication] delegate];
         viewIndex = 1000;
         
-        self.view.frame = rect;
+        m_RectFrame = rect;
+        
+        m_ArrayOldComponents = [array retain];
+        m_ArrayNewComponents = [NSMutableArray new];
     }
     return self;
+}
+
+- (void)dismissModalViewControllerAnimated:(BOOL)animated {
+    [self.view removeFromSuperview];
 }
 
 - (UIImage *)renderToSave
@@ -69,24 +77,7 @@
 
 - (void)saveObjectContent:(int)aReflection_id
 {
-	for (UIView *view in viewFreeEditor.subviews)
-	{
-		if ([view tag] > 1000)
-		{
-			if ([view tag] < 2000)
-			{
-				//save TextView to arrReflectionContent : id, reflection_id, objContent, objType
-				TextNoteViewController *vc = [[TextNoteViewController alloc] init];
-				vc.view = view;
-				
-				objText *objContent = [[objText alloc] initWithFrame:[view frame] content:[vc strContent] tag:[view tag] fontColor:[vc fontColor] fontName:[vc fontName] fontSize:[vc fontSize]];
-				
-				int max = [common findMax:[[appDelegate objOutput] arrReflectionContent]] + 1;
-				NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [NSNumber numberWithInt:aReflection_id], objContent, @"TextView", nil];
-				[[[appDelegate objOutput] arrReflectionContent] addObject:arrObject];
-			}
-		}
-	}
+
 }
 
 - (void)editReflection:(int)aReflectionID
@@ -97,36 +88,7 @@
 
 - (IBAction)clickSave:(id)sender
 {
-	[self hideToolbars];
-	UIImage *img = [self renderToSave];
-	
-	//save image to docDir
-	NSString *imagePath = @"";
-	if ([img isKindOfClass:[UIImage class]])
-	{
-		NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-		imagePath = [NSString stringWithFormat:@"%@/img_%@.png",docDir, [NSDate date]];
-		
-		NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(img)];
-		[data1 writeToFile:imagePath atomically:YES];
-		//NSLog(@"image path : %@", imagePath);
-	}
-	
-	//save to arrReflectionList : id, title, image, private, date, user_id
-	NSDate *date = [NSDate date];
-	NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-	[dateFormat setDateFormat:@"EEEE MMMM d, YYYY"]; //example : Saturday November 22, 2008
-	NSString *aDate = [dateFormat stringFromDate:date];  
-	[dateFormat release];
-    
-	int max = [common findMax:[[appDelegate objOutput] arrReflectionList]] + 1;
-	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], nil];
-	[[[appDelegate objOutput] arrReflectionList] addObject:arrObject];
-	
-	//save objText to arrReflectionContent
-	[self saveObjectContent:max];
-    
-	[self dismissModalViewControllerAnimated:NO];
+
 }
 
 - (void)browsePhotoAlbum:(id)sender
@@ -148,7 +110,7 @@
 - (IBAction)clickText:(id)sender
 {
 	viewIndex = viewIndex + 1;
-	CGRect frame = CGRectMake(100, 100, 400, 300);
+	CGRect frame = FRAME_REFLECTION_TEXT_NOTE;
     
 	TextNoteViewController *vc = [[TextNoteViewController alloc] initWithNibName:@"TextNoteViewController" bundle:nil];
 	[vc.view setFrame:frame];
@@ -165,6 +127,9 @@
 	PostItViewController *vc = [[PostItViewController alloc] initWithNibName:@"PostItViewController" bundle:nil];
 	[vc.view setTag:vIndex];
 	[viewFreeEditor addSubview:vc.view];
+    
+    [m_ArrayNewComponents addObject:vc];
+    
 	[vc.view release];
 }
 
@@ -311,12 +276,57 @@
 - (void)dealloc
 {
 	if (paintnote_vc) [self deletePaintview];
+    
+    RELEASE_SAFE(m_ArrayOldComponents);
+    RELEASE_SAFE(m_ArrayNewComponents);
+    
 	[super dealloc];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    for (UIViewController *mem in m_ArrayOldComponents) {
+        NSLog(@"mem: %@", [[mem class] description]);
+        LOG_RETAIN_COUNT(mem);
+        
+        if ([[[mem class] description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_PAINT_NOTE]]) {
+
+        }
+        else if ([[[mem class] description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_POST_IT]]) {
+            viewIndex = viewIndex + 1;
+            int vIndex = viewIndex + 4000;
+            
+            PostItViewController *postItVC = [[PostItViewController alloc] initWithNibName:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_POST_IT] bundle:nil];
+            [postItVC.view setTag:vIndex];
+            postItVC.view.frame = mem.view.frame;
+            [viewFreeEditor addSubview:postItVC.view];
+            
+            [m_ArrayNewComponents addObject:postItVC];
+            
+            [viewFreeEditor addSubview:postItVC.view];
+            RELEASE_SAFE(postItVC);
+        }
+        else if ([[[mem class] description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_TEXT_NOTE]]) {
+            viewIndex = viewIndex + 1;
+            
+            TextNoteViewController *textNoteVC = [[TextNoteViewController alloc] initWithNibName:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_TEXT_NOTE] bundle:nil];
+            [textNoteVC.view setFrame:mem.view.frame];
+            [textNoteVC.view setTag:viewIndex];
+            
+            [m_ArrayNewComponents addObject:textNoteVC];
+            
+            [viewFreeEditor addSubview:textNoteVC.view];
+            RELEASE_SAFE(textNoteVC);
+        }
+        else { 
+            [viewFreeEditor addSubview:mem.view];
+        }
+        
+    }
+    
+    self.view.frame = m_RectFrame;
 }
 
 - (void)viewDidUnload

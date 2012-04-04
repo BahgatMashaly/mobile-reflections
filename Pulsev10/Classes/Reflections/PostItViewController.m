@@ -7,6 +7,7 @@
 //
 
 #import "PostItViewController.h"
+#import "Define.h"
 
 @implementation PostItViewController
 
@@ -74,6 +75,11 @@
 
 #pragma mark - View lifecycle
 
+- (void)dealloc {
+    RELEASE_SAFE(imgNoteBG);
+    RELEASE_SAFE(txtContent);
+    [super dealloc];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

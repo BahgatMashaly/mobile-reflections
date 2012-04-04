@@ -7,6 +7,7 @@
 //
 
 #import "CreateReflectionViewController.h"
+#import "Define.h"
 
 @implementation CreateReflectionViewController
 
@@ -113,7 +114,7 @@
 	[dateFormat release];
 
 	int max = [common findMax:[[appDelegate objOutput] arrReflectionList]] + 1;
-	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], nil];
+	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], m_ArrayComponents, nil];
 	[[[appDelegate objOutput] arrReflectionList] addObject:arrObject];
 	
 	//save objText to arrReflectionContent
@@ -141,13 +142,16 @@
 - (IBAction)clickText:(id)sender
 {
 	viewIndex = viewIndex + 1;
-	CGRect frame = CGRectMake(100, 100, 400, 300);
+	CGRect frame = FRAME_REFLECTION_TEXT_NOTE;
 
 	TextNoteViewController *vc = [[TextNoteViewController alloc] initWithNibName:@"TextNoteViewController" bundle:nil];
 	[vc.view setFrame:frame];
 	[vc.view setTag:viewIndex];
 	[viewFreeEditor addSubview:vc.view];
-	[vc.view release];
+    
+    [m_ArrayComponents addObject:vc];
+    
+	RELEASE_SAFE(vc);
 }
 
 - (IBAction)clickPostIt:(id)sender
@@ -158,7 +162,10 @@
 	PostItViewController *vc = [[PostItViewController alloc] initWithNibName:@"PostItViewController" bundle:nil];
 	[vc.view setTag:vIndex];
 	[viewFreeEditor addSubview:vc.view];
-	[vc.view release];
+    
+    [m_ArrayComponents addObject:vc];
+
+	RELEASE_SAFE(vc);
 }
 
 - (IBAction)clickVoiceImport:(id)sender
@@ -245,6 +252,8 @@
 		paintnote_vc = [[PaintNoteViewController alloc] initWithNibName:@"PaintNoteViewController" bundle:nil];
 		[paintnote_vc setMyDelegate:self];
 		[viewFreeEditor addSubview:paintnote_vc.view];
+        
+        [m_ArrayComponents addObject:paintnote_vc];
 	}
 	else
 	{
@@ -265,6 +274,8 @@
 			viewIndex = viewIndex - 1;
 		}
 	}
+    
+    [m_ArrayComponents removeAllObjects];
 }
 
 - (IBAction)clickPrivate:(id)sender
@@ -305,6 +316,9 @@
 - (void)dealloc
 {
 	if (paintnote_vc) [self deletePaintview];
+    
+    RELEASE_SAFE(m_ArrayComponents);
+    
 	[super dealloc];
 }
 
@@ -335,6 +349,9 @@
 	[vc.view setTag:vIndex];
 	[viewFreeEditor addSubview:vc.view];
 	[vc setSource:imgSource];
+    
+    [m_ArrayComponents addObject:vc];
+    
 	[vc.view release];
 }
 
