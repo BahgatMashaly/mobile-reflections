@@ -114,7 +114,7 @@
 	[dateFormat release];
 
 	int max = [common findMax:[[appDelegate objOutput] arrReflectionList]] + 1;
-	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], m_ArrayComponents, nil];
+	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], [NSMutableArray arrayWithArray:m_ArrayComponents], nil];
 	[[[appDelegate objOutput] arrReflectionList] addObject:arrObject];
 	
 	//save objText to arrReflectionContent
@@ -317,6 +317,7 @@
 {
 	if (paintnote_vc) [self deletePaintview];
     
+    [m_ArrayComponents removeAllObjects];
     RELEASE_SAFE(m_ArrayComponents);
     
 	[super dealloc];
