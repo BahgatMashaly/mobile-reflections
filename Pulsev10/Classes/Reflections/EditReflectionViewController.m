@@ -20,7 +20,7 @@
         
         m_RectFrame = rect;
         
-        m_ArrayOldComponents = [array retain];
+        m_ArrayOldComponents = [[NSMutableArray alloc] initWithArray:array];
         m_ArrayNewComponents = [NSMutableArray new];
     }
     return self;
@@ -237,6 +237,8 @@
 			viewIndex = viewIndex - 1;
 		}
 	}
+    
+    [self loadViewWithOldArray];
 }
 
 - (IBAction)clickPrivate:(id)sender
@@ -273,19 +275,19 @@
 
 #pragma mark - View lifecycle
 
-- (void)dealloc
-{
+- (void)dealloc {
 	if (paintnote_vc) [self deletePaintview];
     
+    [m_ArrayNewComponents removeAllObjects];
+    [m_ArrayOldComponents removeAllObjects];
     RELEASE_SAFE(m_ArrayOldComponents);
     RELEASE_SAFE(m_ArrayNewComponents);
     
 	[super dealloc];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)loadViewWithOldArray {
+    [m_ArrayNewComponents removeAllObjects];
     
     for (UIViewController *mem in m_ArrayOldComponents) {
         NSLog(@"mem: %@", [[mem class] description]);
@@ -328,8 +330,13 @@
     self.view.frame = m_RectFrame;
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self loadViewWithOldArray];
+}
+
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

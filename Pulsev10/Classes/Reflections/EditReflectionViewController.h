@@ -41,6 +41,7 @@
 	BOOL                                isEditing;
 }
 - (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array;
+- (void)loadViewWithOldArray;
 
 - (IBAction)clickPrivate:(id)sender;
 - (IBAction)clickSave:(id)sender;
