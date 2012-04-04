@@ -52,6 +52,25 @@
 #define FRAME_LEFT(view, dis)                   FRAME(-dis, view.frame.origin.y, view.frame.size.width, view.frame.size.height)
 #define FRAME_TOP(view, dis)                    FRAME(view.frame.origin.x, -dis, view.frame.size.width, view.frame.size.height)
 #define FRAME_BOTTOM(view, dis)                 FRAME(view.frame.origin.x, dis, view.frame.size.width, view.frame.size.height)
+#define FRAME_REFLECTION_TEXT_NOTE              FRAME(100, 100, 330, 250)
+typedef enum 
+{
+    ENUM_INDEX_REFLECTION_DATA_MAX,
+    ENUM_INDEX_REFLECTION_DATA_TITILE,
+    ENUM_INDEX_REFLECTION_DATA_IMAGE,
+    ENUM_INDEX_REFLECTION_DATA_IS_PRIVATE,
+    ENUM_INDEX_REFLECTION_DATA_DATE,
+    ENUM_INDEX_REFLECTION_DATA_USER_NAME,
+    ENUM_INDEX_REFLECTION_DATA_COMPONENTS
+}ENUM_INDEX_REFLECTION_DATA;
+
+#define ARRAY_STRING_COMPONENTS                 [NSArray arrayWithObjects:@"PostItViewController", @"TextNoteViewController", @"PaintNoteViewController", nil]
+typedef enum 
+{
+    ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_POST_IT,
+    ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_TEXT_NOTE,
+    ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_PAINT_NOTE
+}ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER;
 
 @protocol AppViewControllerProtocol <NSObject>
 - (void)update;

@@ -7,6 +7,7 @@
 //
 
 #import "TextNoteViewController.h"
+#import "Define.h"
 
 #define kResizeThumbSize 24
 #define minWidth 350
@@ -268,10 +269,15 @@
 
 - (void)dealloc
 {
-	[strContent release];
-	[fontColor release];
-	[fontName release];
-	
+	RELEASE_SAFE(strContent);
+	RELEASE_SAFE(fontColor);
+	RELEASE_SAFE(fontName);
+	RELEASE_SAFE(aPopover);
+    RELEASE_SAFE(imgTextBG);
+    RELEASE_SAFE(imgResize);
+    RELEASE_SAFE(txtContent);
+    RELEASE_SAFE(toolbar);
+    
 	[super dealloc];
 }
 

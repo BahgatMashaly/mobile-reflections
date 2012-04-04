@@ -34,8 +34,9 @@
 	UIPopoverController                 *aPopover;
 	PaintNoteViewController             *paintnote_vc;
     
-    NSMutableArray                      *m_ArrayComponents;
-	EditReflectionViewController        *m_EditVC;
+    NSMutableArray                      *m_ArrayOldComponents;
+    NSMutableArray                      *m_ArrayNewComponents;
+    CGRect                              m_RectFrame;
     
 	BOOL                                isEditing;
 }
