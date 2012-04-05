@@ -42,6 +42,7 @@
 }
 - (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array;
 - (void)loadViewWithOldArray;
+- (void)addNewComponentView:(UIView *)view;
 
 - (IBAction)clickPrivate:(id)sender;
 - (IBAction)clickSave:(id)sender;

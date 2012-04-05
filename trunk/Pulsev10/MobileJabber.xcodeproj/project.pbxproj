@@ -141,8 +141,6 @@
 		50A7483714A4EA89001EC71E /* Eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A7483614A4EA88001EC71E /* Eraser.png */; };
 		50A9F08414EB73B500E2B38F /* note_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A9F08314EB73B500E2B38F /* note_bg.png */; };
 		50B272A714EA165500BC4C35 /* task_notes_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B272A614EA165500BC4C35 /* task_notes_32.png */; };
-		50B272AC14EA180D00BC4C35 /* PostItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B272AA14EA180D00BC4C35 /* PostItViewController.m */; };
-		50B272AD14EA180D00BC4C35 /* PostItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B272AB14EA180D00BC4C35 /* PostItViewController.xib */; };
 		50B272B114EA481000BC4C35 /* Text_Document_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B272B014EA481000BC4C35 /* Text_Document_32.png */; };
 		50B272B314EA48CD00BC4C35 /* Pictures_Canon_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B272B214EA48CD00BC4C35 /* Pictures_Canon_32.png */; };
 		50B272B614EA494B00BC4C35 /* Cameras_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B272B414EA494B00BC4C35 /* Cameras_32.png */; };
@@ -153,8 +151,6 @@
 		50B272BF14EA54AF00BC4C35 /* videos_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B272BE14EA54AF00BC4C35 /* videos_32.png */; };
 		50B272C114EA56EF00BC4C35 /* Apps_background_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B272C014EA56EF00BC4C35 /* Apps_background_32.png */; };
 		50DA7A7F14AC7C30009C2F8D /* objText.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA7A7E14AC7C30009C2F8D /* objText.m */; };
-		50DDA3F2149F131A00229F5C /* PhotoNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDA3F0149F131A00229F5C /* PhotoNoteViewController.m */; };
-		50DDA3F3149F131A00229F5C /* PhotoNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DDA3F1149F131A00229F5C /* PhotoNoteViewController.xib */; };
 		50F1E4DC148BD98C007FE5CD /* CheckmarkTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E486148BD98C007FE5CD /* CheckmarkTile.m */; };
 		50F1E4DD148BD98C007FE5CD /* KLCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E489148BD98C007FE5CD /* KLCalendarModel.m */; };
 		50F1E4DE148BD98C007FE5CD /* KLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E48B148BD98C007FE5CD /* KLCalendarView.m */; };
@@ -174,8 +170,6 @@
 		50F1E4EF148BD98C007FE5CD /* colormap.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4A7148BD98C007FE5CD /* colormap.png */; };
 		50F1E4F0148BD98C007FE5CD /* crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4A8148BD98C007FE5CD /* crosshair.png */; };
 		50F1E4F1148BD98C007FE5CD /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4AA148BD98C007FE5CD /* common.m */; };
-		50F1E4F2148BD98C007FE5CD /* CreateReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4AC148BD98C007FE5CD /* CreateReflectionViewController.m */; };
-		50F1E4F3148BD98C007FE5CD /* CreateReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4AD148BD98C007FE5CD /* CreateReflectionViewController.xib */; };
 		50F1E4F4148BD98C007FE5CD /* dateLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4AF148BD98C007FE5CD /* dateLib.m */; };
 		50F1E4F5148BD98C007FE5CD /* FontPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4B1148BD98C007FE5CD /* FontPickerViewController.m */; };
 		50F1E4F6148BD98C007FE5CD /* FontPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4B2148BD98C007FE5CD /* FontPickerViewController.xib */; };
@@ -197,14 +191,8 @@
 		50F1E506148BD98C007FE5CD /* text_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4C5148BD98C007FE5CD /* text_bg.png */; };
 		50F1E507148BD98C007FE5CD /* woodfloor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4C6148BD98C007FE5CD /* woodfloor.jpg */; };
 		50F1E508148BD98C007FE5CD /* Output.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4C8148BD98C007FE5CD /* Output.m */; };
-		50F1E509148BD98C007FE5CD /* PaintNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4CA148BD98C007FE5CD /* PaintNoteViewController.m */; };
-		50F1E50A148BD98C007FE5CD /* PaintNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4CB148BD98C007FE5CD /* PaintNoteViewController.xib */; };
-		50F1E50B148BD98C007FE5CD /* ReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4CD148BD98C007FE5CD /* ReflectionViewController.m */; };
-		50F1E50C148BD98C007FE5CD /* ReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4CE148BD98C007FE5CD /* ReflectionViewController.xib */; };
 		50F1E50D148BD98C007FE5CD /* SizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4D0148BD98C007FE5CD /* SizeViewController.m */; };
 		50F1E50E148BD98C007FE5CD /* SizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4D1148BD98C007FE5CD /* SizeViewController.xib */; };
-		50F1E50F148BD98C007FE5CD /* TextNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4D3148BD98C007FE5CD /* TextNoteViewController.m */; };
-		50F1E510148BD98C007FE5CD /* TextNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F1E4D4148BD98C007FE5CD /* TextNoteViewController.xib */; };
 		50F1E511148BD98C007FE5CD /* ImageNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4D7148BD98C007FE5CD /* ImageNoteView.m */; };
 		50F1E512148BD98C007FE5CD /* ReflectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4D9148BD98C007FE5CD /* ReflectionCell.m */; };
 		50F1E513148BD98C007FE5CD /* TextNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F1E4DB148BD98C007FE5CD /* TextNoteView.m */; };
@@ -213,8 +201,20 @@
 		50FEED82149A295C00EFF5E7 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FEED81149A295C00EFF5E7 /* CommentCell.m */; };
 		92877873143F2E84006100DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92877872143F2E84006100DB /* QuartzCore.framework */; };
 		92877875143F2E8F006100DB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92877874143F2E8F006100DB /* MediaPlayer.framework */; };
-		D79E67CE152AF7FA00CB1B8F /* EditReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E67CC152AF7FA00CB1B8F /* EditReflectionViewController.m */; };
-		D79E67CF152AF7FA00CB1B8F /* EditReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D79E67CD152AF7FA00CB1B8F /* EditReflectionViewController.xib */; };
+		D74D46E3152E0A0800A89711 /* PaintNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46CD152E0A0800A89711 /* PaintNoteViewController.m */; };
+		D74D46E4152E0A0800A89711 /* PaintNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46CE152E0A0800A89711 /* PaintNoteViewController.xib */; };
+		D74D46E5152E0A0800A89711 /* PhotoNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46D0152E0A0800A89711 /* PhotoNoteViewController.m */; };
+		D74D46E6152E0A0800A89711 /* PhotoNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46D1152E0A0800A89711 /* PhotoNoteViewController.xib */; };
+		D74D46E7152E0A0800A89711 /* PostItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46D3152E0A0800A89711 /* PostItViewController.m */; };
+		D74D46E8152E0A0800A89711 /* PostItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46D4152E0A0800A89711 /* PostItViewController.xib */; };
+		D74D46E9152E0A0800A89711 /* TextNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46D6152E0A0800A89711 /* TextNoteViewController.m */; };
+		D74D46EA152E0A0800A89711 /* TextNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46D7152E0A0800A89711 /* TextNoteViewController.xib */; };
+		D74D46EB152E0A0800A89711 /* CreateReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46DA152E0A0800A89711 /* CreateReflectionViewController.m */; };
+		D74D46EC152E0A0800A89711 /* CreateReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46DB152E0A0800A89711 /* CreateReflectionViewController.xib */; };
+		D74D46ED152E0A0800A89711 /* EditReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46DD152E0A0800A89711 /* EditReflectionViewController.m */; };
+		D74D46EE152E0A0800A89711 /* EditReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46DE152E0A0800A89711 /* EditReflectionViewController.xib */; };
+		D74D46EF152E0A0800A89711 /* ReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46E1152E0A0800A89711 /* ReflectionViewController.m */; };
+		D74D46F0152E0A0800A89711 /* ReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */; };
 		D79E67DD152AFF8500CB1B8F /* SupportFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E67DC152AFF8500CB1B8F /* SupportFunction.m */; };
 		E3031FC013AA97BA00EB7DB4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3031FBE13AA97BA00EB7DB4 /* LoginViewController.m */; };
 		E3031FC113AA97BA00EB7DB4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3031FBF13AA97BA00EB7DB4 /* LoginViewController.xib */; };
@@ -651,9 +651,6 @@
 		50A7483614A4EA88001EC71E /* Eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eraser.png; sourceTree = "<group>"; };
 		50A9F08314EB73B500E2B38F /* note_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note_bg.png; sourceTree = "<group>"; };
 		50B272A614EA165500BC4C35 /* task_notes_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_notes_32.png; sourceTree = "<group>"; };
-		50B272A914EA180D00BC4C35 /* PostItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItViewController.h; sourceTree = "<group>"; };
-		50B272AA14EA180D00BC4C35 /* PostItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItViewController.m; sourceTree = "<group>"; };
-		50B272AB14EA180D00BC4C35 /* PostItViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostItViewController.xib; sourceTree = "<group>"; };
 		50B272B014EA481000BC4C35 /* Text_Document_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Text_Document_32.png; sourceTree = "<group>"; };
 		50B272B214EA48CD00BC4C35 /* Pictures_Canon_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pictures_Canon_32.png; sourceTree = "<group>"; };
 		50B272B414EA494B00BC4C35 /* Cameras_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cameras_32.png; sourceTree = "<group>"; };
@@ -665,9 +662,6 @@
 		50B272C014EA56EF00BC4C35 /* Apps_background_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apps_background_32.png; sourceTree = "<group>"; };
 		50DA7A7D14AC7C30009C2F8D /* objText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objText.h; sourceTree = "<group>"; };
 		50DA7A7E14AC7C30009C2F8D /* objText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = objText.m; sourceTree = "<group>"; };
-		50DDA3EF149F131A00229F5C /* PhotoNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoNoteViewController.h; sourceTree = "<group>"; };
-		50DDA3F0149F131A00229F5C /* PhotoNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoNoteViewController.m; sourceTree = "<group>"; };
-		50DDA3F1149F131A00229F5C /* PhotoNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoNoteViewController.xib; sourceTree = "<group>"; };
 		50F1E485148BD98C007FE5CD /* CheckmarkTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckmarkTile.h; sourceTree = "<group>"; };
 		50F1E486148BD98C007FE5CD /* CheckmarkTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckmarkTile.m; sourceTree = "<group>"; };
 		50F1E487148BD98C007FE5CD /* KCalendar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCalendar_Prefix.pch; sourceTree = "<group>"; };
@@ -700,9 +694,6 @@
 		50F1E4A8148BD98C007FE5CD /* crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crosshair.png; sourceTree = "<group>"; };
 		50F1E4A9148BD98C007FE5CD /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		50F1E4AA148BD98C007FE5CD /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
-		50F1E4AB148BD98C007FE5CD /* CreateReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateReflectionViewController.h; sourceTree = "<group>"; };
-		50F1E4AC148BD98C007FE5CD /* CreateReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateReflectionViewController.m; sourceTree = "<group>"; };
-		50F1E4AD148BD98C007FE5CD /* CreateReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateReflectionViewController.xib; sourceTree = "<group>"; };
 		50F1E4AE148BD98C007FE5CD /* dateLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dateLib.h; sourceTree = "<group>"; };
 		50F1E4AF148BD98C007FE5CD /* dateLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dateLib.m; sourceTree = "<group>"; };
 		50F1E4B0148BD98C007FE5CD /* FontPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontPickerViewController.h; sourceTree = "<group>"; };
@@ -728,18 +719,9 @@
 		50F1E4C6148BD98C007FE5CD /* woodfloor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodfloor.jpg; sourceTree = "<group>"; };
 		50F1E4C7148BD98C007FE5CD /* Output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Output.h; sourceTree = "<group>"; };
 		50F1E4C8148BD98C007FE5CD /* Output.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Output.m; sourceTree = "<group>"; };
-		50F1E4C9148BD98C007FE5CD /* PaintNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintNoteViewController.h; sourceTree = "<group>"; };
-		50F1E4CA148BD98C007FE5CD /* PaintNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintNoteViewController.m; sourceTree = "<group>"; };
-		50F1E4CB148BD98C007FE5CD /* PaintNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaintNoteViewController.xib; sourceTree = "<group>"; };
-		50F1E4CC148BD98C007FE5CD /* ReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionViewController.h; sourceTree = "<group>"; };
-		50F1E4CD148BD98C007FE5CD /* ReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionViewController.m; sourceTree = "<group>"; };
-		50F1E4CE148BD98C007FE5CD /* ReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReflectionViewController.xib; sourceTree = "<group>"; };
 		50F1E4CF148BD98C007FE5CD /* SizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SizeViewController.h; sourceTree = "<group>"; };
 		50F1E4D0148BD98C007FE5CD /* SizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SizeViewController.m; sourceTree = "<group>"; };
 		50F1E4D1148BD98C007FE5CD /* SizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SizeViewController.xib; sourceTree = "<group>"; };
-		50F1E4D2148BD98C007FE5CD /* TextNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNoteViewController.h; sourceTree = "<group>"; };
-		50F1E4D3148BD98C007FE5CD /* TextNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNoteViewController.m; sourceTree = "<group>"; };
-		50F1E4D4148BD98C007FE5CD /* TextNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextNoteViewController.xib; sourceTree = "<group>"; };
 		50F1E4D6148BD98C007FE5CD /* ImageNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageNoteView.h; sourceTree = "<group>"; };
 		50F1E4D7148BD98C007FE5CD /* ImageNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageNoteView.m; sourceTree = "<group>"; };
 		50F1E4D8148BD98C007FE5CD /* ReflectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionCell.h; sourceTree = "<group>"; };
@@ -755,9 +737,27 @@
 		92877872143F2E84006100DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		92877874143F2E8F006100DB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		92877876143F2EDD006100DB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		D79E67CB152AF7FA00CB1B8F /* EditReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditReflectionViewController.h; sourceTree = "<group>"; };
-		D79E67CC152AF7FA00CB1B8F /* EditReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditReflectionViewController.m; sourceTree = "<group>"; };
-		D79E67CD152AF7FA00CB1B8F /* EditReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditReflectionViewController.xib; sourceTree = "<group>"; };
+		D74D46CC152E0A0800A89711 /* PaintNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintNoteViewController.h; sourceTree = "<group>"; };
+		D74D46CD152E0A0800A89711 /* PaintNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintNoteViewController.m; sourceTree = "<group>"; };
+		D74D46CE152E0A0800A89711 /* PaintNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaintNoteViewController.xib; sourceTree = "<group>"; };
+		D74D46CF152E0A0800A89711 /* PhotoNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoNoteViewController.h; sourceTree = "<group>"; };
+		D74D46D0152E0A0800A89711 /* PhotoNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoNoteViewController.m; sourceTree = "<group>"; };
+		D74D46D1152E0A0800A89711 /* PhotoNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoNoteViewController.xib; sourceTree = "<group>"; };
+		D74D46D2152E0A0800A89711 /* PostItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostItViewController.h; sourceTree = "<group>"; };
+		D74D46D3152E0A0800A89711 /* PostItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostItViewController.m; sourceTree = "<group>"; };
+		D74D46D4152E0A0800A89711 /* PostItViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostItViewController.xib; sourceTree = "<group>"; };
+		D74D46D5152E0A0800A89711 /* TextNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNoteViewController.h; sourceTree = "<group>"; };
+		D74D46D6152E0A0800A89711 /* TextNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNoteViewController.m; sourceTree = "<group>"; };
+		D74D46D7152E0A0800A89711 /* TextNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextNoteViewController.xib; sourceTree = "<group>"; };
+		D74D46D9152E0A0800A89711 /* CreateReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateReflectionViewController.h; sourceTree = "<group>"; };
+		D74D46DA152E0A0800A89711 /* CreateReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateReflectionViewController.m; sourceTree = "<group>"; };
+		D74D46DB152E0A0800A89711 /* CreateReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateReflectionViewController.xib; sourceTree = "<group>"; };
+		D74D46DC152E0A0800A89711 /* EditReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditReflectionViewController.h; sourceTree = "<group>"; };
+		D74D46DD152E0A0800A89711 /* EditReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditReflectionViewController.m; sourceTree = "<group>"; };
+		D74D46DE152E0A0800A89711 /* EditReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditReflectionViewController.xib; sourceTree = "<group>"; };
+		D74D46E0152E0A0800A89711 /* ReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionViewController.h; sourceTree = "<group>"; };
+		D74D46E1152E0A0800A89711 /* ReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionViewController.m; sourceTree = "<group>"; };
+		D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReflectionViewController.xib; sourceTree = "<group>"; };
 		D79E67DA152AFF8500CB1B8F /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		D79E67DB152AFF8500CB1B8F /* SupportFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportFunction.h; sourceTree = "<group>"; };
 		D79E67DC152AFF8500CB1B8F /* SupportFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportFunction.m; sourceTree = "<group>"; };
@@ -1600,6 +1600,9 @@
 		50F1E483148BD98B007FE5CD /* Reflections */ = {
 			isa = PBXGroup;
 			children = (
+				D74D46DF152E0A0800A89711 /* EDIT_MENU */,
+				D74D46D8152E0A0800A89711 /* CREATE_EDIT */,
+				D74D46CB152E0A0800A89711 /* COMPONENTS */,
 				50DA7A7C14AC7BEB009C2F8D /* Objects */,
 				50F1E4B6148BD98C007FE5CD /* images */,
 				50F1E484148BD98C007FE5CD /* Calendar */,
@@ -1607,12 +1610,6 @@
 				50F1E4D5148BD98C007FE5CD /* Views */,
 				50F1E4A9148BD98C007FE5CD /* common.h */,
 				50F1E4AA148BD98C007FE5CD /* common.m */,
-				D79E67CB152AF7FA00CB1B8F /* EditReflectionViewController.h */,
-				D79E67CC152AF7FA00CB1B8F /* EditReflectionViewController.m */,
-				D79E67CD152AF7FA00CB1B8F /* EditReflectionViewController.xib */,
-				50F1E4AB148BD98C007FE5CD /* CreateReflectionViewController.h */,
-				50F1E4AC148BD98C007FE5CD /* CreateReflectionViewController.m */,
-				50F1E4AD148BD98C007FE5CD /* CreateReflectionViewController.xib */,
 				50F1E4AE148BD98C007FE5CD /* dateLib.h */,
 				50F1E4AF148BD98C007FE5CD /* dateLib.m */,
 				50F1E4B0148BD98C007FE5CD /* FontPickerViewController.h */,
@@ -1621,17 +1618,8 @@
 				50F1E4B3148BD98C007FE5CD /* ImageNoteViewController.h */,
 				50F1E4B4148BD98C007FE5CD /* ImageNoteViewController.m */,
 				50F1E4B5148BD98C007FE5CD /* ImageNoteViewController.xib */,
-				50DDA3EF149F131A00229F5C /* PhotoNoteViewController.h */,
-				50DDA3F0149F131A00229F5C /* PhotoNoteViewController.m */,
-				50DDA3F1149F131A00229F5C /* PhotoNoteViewController.xib */,
 				50F1E4C7148BD98C007FE5CD /* Output.h */,
 				50F1E4C8148BD98C007FE5CD /* Output.m */,
-				50F1E4C9148BD98C007FE5CD /* PaintNoteViewController.h */,
-				50F1E4CA148BD98C007FE5CD /* PaintNoteViewController.m */,
-				50F1E4CB148BD98C007FE5CD /* PaintNoteViewController.xib */,
-				50F1E4CC148BD98C007FE5CD /* ReflectionViewController.h */,
-				50F1E4CD148BD98C007FE5CD /* ReflectionViewController.m */,
-				50F1E4CE148BD98C007FE5CD /* ReflectionViewController.xib */,
 				50A7483114A498EE001EC71E /* AddCommentViewController.h */,
 				50A7483214A498EF001EC71E /* AddCommentViewController.m */,
 				50A7483314A498EF001EC71E /* AddCommentViewController.xib */,
@@ -1641,15 +1629,9 @@
 				50F1E4CF148BD98C007FE5CD /* SizeViewController.h */,
 				50F1E4D0148BD98C007FE5CD /* SizeViewController.m */,
 				50F1E4D1148BD98C007FE5CD /* SizeViewController.xib */,
-				50F1E4D2148BD98C007FE5CD /* TextNoteViewController.h */,
-				50F1E4D3148BD98C007FE5CD /* TextNoteViewController.m */,
-				50F1E4D4148BD98C007FE5CD /* TextNoteViewController.xib */,
 				5080554314A70485008043E2 /* CalendarViewController.h */,
 				5080554414A70485008043E2 /* CalendarViewController.m */,
 				5080554514A70486008043E2 /* CalendarViewController.xib */,
-				50B272A914EA180D00BC4C35 /* PostItViewController.h */,
-				50B272AA14EA180D00BC4C35 /* PostItViewController.m */,
-				50B272AB14EA180D00BC4C35 /* PostItViewController.xib */,
 			);
 			path = Reflections;
 			sourceTree = "<group>";
@@ -1765,6 +1747,48 @@
 				50F1E4DB148BD98C007FE5CD /* TextNoteView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D74D46CB152E0A0800A89711 /* COMPONENTS */ = {
+			isa = PBXGroup;
+			children = (
+				D74D46CC152E0A0800A89711 /* PaintNoteViewController.h */,
+				D74D46CD152E0A0800A89711 /* PaintNoteViewController.m */,
+				D74D46CE152E0A0800A89711 /* PaintNoteViewController.xib */,
+				D74D46CF152E0A0800A89711 /* PhotoNoteViewController.h */,
+				D74D46D0152E0A0800A89711 /* PhotoNoteViewController.m */,
+				D74D46D1152E0A0800A89711 /* PhotoNoteViewController.xib */,
+				D74D46D2152E0A0800A89711 /* PostItViewController.h */,
+				D74D46D3152E0A0800A89711 /* PostItViewController.m */,
+				D74D46D4152E0A0800A89711 /* PostItViewController.xib */,
+				D74D46D5152E0A0800A89711 /* TextNoteViewController.h */,
+				D74D46D6152E0A0800A89711 /* TextNoteViewController.m */,
+				D74D46D7152E0A0800A89711 /* TextNoteViewController.xib */,
+			);
+			path = COMPONENTS;
+			sourceTree = "<group>";
+		};
+		D74D46D8152E0A0800A89711 /* CREATE_EDIT */ = {
+			isa = PBXGroup;
+			children = (
+				D74D46D9152E0A0800A89711 /* CreateReflectionViewController.h */,
+				D74D46DA152E0A0800A89711 /* CreateReflectionViewController.m */,
+				D74D46DB152E0A0800A89711 /* CreateReflectionViewController.xib */,
+				D74D46DC152E0A0800A89711 /* EditReflectionViewController.h */,
+				D74D46DD152E0A0800A89711 /* EditReflectionViewController.m */,
+				D74D46DE152E0A0800A89711 /* EditReflectionViewController.xib */,
+			);
+			path = CREATE_EDIT;
+			sourceTree = "<group>";
+		};
+		D74D46DF152E0A0800A89711 /* EDIT_MENU */ = {
+			isa = PBXGroup;
+			children = (
+				D74D46E0152E0A0800A89711 /* ReflectionViewController.h */,
+				D74D46E1152E0A0800A89711 /* ReflectionViewController.m */,
+				D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */,
+			);
+			path = EDIT_MENU;
 			sourceTree = "<group>";
 		};
 		D79E67D1152AFF2900CB1B8F /* 04_SUPPORT */ = {
@@ -2988,7 +3012,6 @@
 				50F1E4EE148BD98C007FE5CD /* bar_select.png in Resources */,
 				50F1E4EF148BD98C007FE5CD /* colormap.png in Resources */,
 				50F1E4F0148BD98C007FE5CD /* crosshair.png in Resources */,
-				50F1E4F3148BD98C007FE5CD /* CreateReflectionViewController.xib in Resources */,
 				50F1E4F6148BD98C007FE5CD /* FontPickerViewController.xib in Resources */,
 				50F1E4F8148BD98C007FE5CD /* ImageNoteViewController.xib in Resources */,
 				50F1E4F9148BD98C007FE5CD /* calendar_view.png in Resources */,
@@ -3006,12 +3029,8 @@
 				50F1E505148BD98C007FE5CD /* resize_icon.png in Resources */,
 				50F1E506148BD98C007FE5CD /* text_bg.png in Resources */,
 				50F1E507148BD98C007FE5CD /* woodfloor.jpg in Resources */,
-				50F1E50A148BD98C007FE5CD /* PaintNoteViewController.xib in Resources */,
-				50F1E50C148BD98C007FE5CD /* ReflectionViewController.xib in Resources */,
 				50F1E50E148BD98C007FE5CD /* SizeViewController.xib in Resources */,
-				50F1E510148BD98C007FE5CD /* TextNoteViewController.xib in Resources */,
 				50FEED7E1499B9E000EFF5E7 /* CommentViewController.xib in Resources */,
-				50DDA3F3149F131A00229F5C /* PhotoNoteViewController.xib in Resources */,
 				50A7482F14A495F3001EC71E /* no_reflections.png in Resources */,
 				50A7483514A498EF001EC71E /* AddCommentViewController.xib in Resources */,
 				50A7483714A4EA89001EC71E /* Eraser.png in Resources */,
@@ -3020,7 +3039,6 @@
 				501403E814CABC380043DAB0 /* b_01.png in Resources */,
 				501403EA14CABDE90043DAB0 /* b_02.png in Resources */,
 				50B272A714EA165500BC4C35 /* task_notes_32.png in Resources */,
-				50B272AD14EA180D00BC4C35 /* PostItViewController.xib in Resources */,
 				50B272B114EA481000BC4C35 /* Text_Document_32.png in Resources */,
 				50B272B314EA48CD00BC4C35 /* Pictures_Canon_32.png in Resources */,
 				50B272B614EA494B00BC4C35 /* Cameras_32.png in Resources */,
@@ -3031,7 +3049,13 @@
 				50B272BF14EA54AF00BC4C35 /* videos_32.png in Resources */,
 				50B272C114EA56EF00BC4C35 /* Apps_background_32.png in Resources */,
 				50A9F08414EB73B500E2B38F /* note_bg.png in Resources */,
-				D79E67CF152AF7FA00CB1B8F /* EditReflectionViewController.xib in Resources */,
+				D74D46E4152E0A0800A89711 /* PaintNoteViewController.xib in Resources */,
+				D74D46E6152E0A0800A89711 /* PhotoNoteViewController.xib in Resources */,
+				D74D46E8152E0A0800A89711 /* PostItViewController.xib in Resources */,
+				D74D46EA152E0A0800A89711 /* TextNoteViewController.xib in Resources */,
+				D74D46EC152E0A0800A89711 /* CreateReflectionViewController.xib in Resources */,
+				D74D46EE152E0A0800A89711 /* EditReflectionViewController.xib in Resources */,
+				D74D46F0152E0A0800A89711 /* ReflectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3167,27 +3191,27 @@
 				50F1E4EA148BD98C007FE5CD /* ColorPickerViewController.m in Sources */,
 				50F1E4EC148BD98C007FE5CD /* GradientView.m in Sources */,
 				50F1E4F1148BD98C007FE5CD /* common.m in Sources */,
-				50F1E4F2148BD98C007FE5CD /* CreateReflectionViewController.m in Sources */,
 				50F1E4F4148BD98C007FE5CD /* dateLib.m in Sources */,
 				50F1E4F5148BD98C007FE5CD /* FontPickerViewController.m in Sources */,
 				50F1E4F7148BD98C007FE5CD /* ImageNoteViewController.m in Sources */,
 				50F1E508148BD98C007FE5CD /* Output.m in Sources */,
-				50F1E509148BD98C007FE5CD /* PaintNoteViewController.m in Sources */,
-				50F1E50B148BD98C007FE5CD /* ReflectionViewController.m in Sources */,
 				50F1E50D148BD98C007FE5CD /* SizeViewController.m in Sources */,
-				50F1E50F148BD98C007FE5CD /* TextNoteViewController.m in Sources */,
 				50F1E511148BD98C007FE5CD /* ImageNoteView.m in Sources */,
 				50F1E512148BD98C007FE5CD /* ReflectionCell.m in Sources */,
 				50F1E513148BD98C007FE5CD /* TextNoteView.m in Sources */,
 				50FEED7D1499B9E000EFF5E7 /* CommentViewController.m in Sources */,
 				50FEED82149A295C00EFF5E7 /* CommentCell.m in Sources */,
-				50DDA3F2149F131A00229F5C /* PhotoNoteViewController.m in Sources */,
 				50A7483414A498EF001EC71E /* AddCommentViewController.m in Sources */,
 				5080554614A70486008043E2 /* CalendarViewController.m in Sources */,
 				50DA7A7F14AC7C30009C2F8D /* objText.m in Sources */,
-				50B272AC14EA180D00BC4C35 /* PostItViewController.m in Sources */,
-				D79E67CE152AF7FA00CB1B8F /* EditReflectionViewController.m in Sources */,
 				D79E67DD152AFF8500CB1B8F /* SupportFunction.m in Sources */,
+				D74D46E3152E0A0800A89711 /* PaintNoteViewController.m in Sources */,
+				D74D46E5152E0A0800A89711 /* PhotoNoteViewController.m in Sources */,
+				D74D46E7152E0A0800A89711 /* PostItViewController.m in Sources */,
+				D74D46E9152E0A0800A89711 /* TextNoteViewController.m in Sources */,
+				D74D46EB152E0A0800A89711 /* CreateReflectionViewController.m in Sources */,
+				D74D46ED152E0A0800A89711 /* EditReflectionViewController.m in Sources */,
+				D74D46EF152E0A0800A89711 /* ReflectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
