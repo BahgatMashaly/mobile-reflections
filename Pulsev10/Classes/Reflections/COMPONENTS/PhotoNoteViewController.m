@@ -7,6 +7,8 @@
 //
 
 #import "PhotoNoteViewController.h"
+#import "Define.h"
+
 #define kResizeThumbSize 44
 
 @implementation PhotoNoteViewController
@@ -106,6 +108,11 @@
 		source = [img retain];
 		[self refreshPhoto];
 	}
+}
+
+- (UIImage *)getSource
+{
+	return source;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -328,7 +335,12 @@
 
 - (void)dealloc
 {
-	[source release];
+	RELEASE_SAFE(source);
+    RELEASE_SAFE(aPopover);
+    RELEASE_SAFE(toolbar);
+    RELEASE_SAFE(imgResize);
+    RELEASE_SAFE(imgPhoto);
+    
 	[super dealloc];
 }
 

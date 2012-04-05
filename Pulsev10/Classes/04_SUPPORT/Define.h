@@ -64,12 +64,13 @@ typedef enum
     ENUM_INDEX_REFLECTION_DATA_COMPONENTS
 }ENUM_INDEX_REFLECTION_DATA;
 
-#define ARRAY_STRING_COMPONENTS                 [NSArray arrayWithObjects:@"PostItViewController", @"TextNoteViewController", @"PaintNoteViewController", nil]
+#define ARRAY_STRING_COMPONENTS                 [NSArray arrayWithObjects:@"PostItViewController", @"TextNoteViewController", @"PaintNoteViewController", @"PhotoNoteViewController", nil]
 typedef enum 
 {
     ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_POST_IT,
     ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_TEXT_NOTE,
-    ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_PAINT_NOTE
+    ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_PAINT_NOTE,
+    ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_PHOTO_NOTE
 }ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER;
 
 @protocol AppViewControllerProtocol <NSObject>

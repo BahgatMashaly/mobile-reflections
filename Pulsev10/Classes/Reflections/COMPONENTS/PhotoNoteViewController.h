@@ -12,18 +12,17 @@
 
 @interface PhotoNoteViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, UIGestureRecognizerDelegate>
 {
-	IBOutlet UIToolbar *toolbar;
-	IBOutlet UIImageView *imgResize;
-	IBOutlet UIImageView *imgPhoto;
+	IBOutlet UIToolbar                          *toolbar;
+	IBOutlet UIImageView                        *imgResize;
+	IBOutlet UIImageView                        *imgPhoto;
 
-	UIPopoverController *aPopover;
-	UIImage *source;
-	int sourceType;	//0=PhotoAlbum, 1=Camera
+	UIPopoverController                         *aPopover;
+	UIImage                                     *source;
+	int                                         sourceType;	//0=PhotoAlbum, 1=Camera
 	
-	CGPoint touchStart;
-	BOOL isResizing;
+	CGPoint                                     touchStart;
+	BOOL                                        isResizing;
 }
-
 - (IBAction)clickChangePicture:(id)sender;
 - (IBAction)clickDelete:(id)sender;
 - (IBAction)clickDone:(id)sender;
@@ -33,5 +32,5 @@
 - (IBAction)handleRotate:(UIRotationGestureRecognizer *)recognizer;
 
 - (void)setSource:(UIImage *)img;
-
+- (UIImage *)getSource;
 @end

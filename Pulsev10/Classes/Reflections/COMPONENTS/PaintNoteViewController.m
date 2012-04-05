@@ -7,9 +7,22 @@
 //
 
 #import "PaintNoteViewController.h"
+#import "Define.h"
 
 @implementation PaintNoteViewController
 @synthesize myDelegate;
+
+- (id)initWithImageView:(UIImageView *)imageView {
+    self = [super init];
+    if (self) {
+        m_ImageViewInit = [imageView retain];
+    }
+    return self;
+}
+
+- (UIImageView *)getImageViewDrawing {
+    return imgDrawingboard;
+}
 
 - (void)setSelectedColor:(UIColor *)selectedColor
 {
@@ -185,7 +198,16 @@
 
 - (void)dealloc
 {
-	[color release];
+	RELEASE_SAFE(color);
+    RELEASE_SAFE(lblStroke);
+	RELEASE_SAFE(sliderStroke);
+	RELEASE_SAFE(txtStrokeSize);
+	RELEASE_SAFE(toolbar);
+	RELEASE_SAFE(imgDrawingboard);
+	RELEASE_SAFE(imgEraser);
+    RELEASE_SAFE(aPopover);
+    RELEASE_SAFE(m_ImageViewInit);
+    
 	[super dealloc];
 }
 
@@ -211,10 +233,20 @@
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view from its nib.
-	[self setStrokeSize];
-	color = [UIColor blackColor];
-	eraser = NO;
-	highlighter = NO;
+    if (m_ImageViewInit) {
+        imgDrawingboard.image = m_ImageViewInit.image;
+        [self hideTools];
+        [self setStrokeSize];
+        color = [UIColor blackColor];
+        eraser = NO;
+        highlighter = NO;
+    }
+    else {
+        [self setStrokeSize];
+        color = [UIColor blackColor];
+        eraser = NO;
+        highlighter = NO;
+    }
 }
 
 - (void)viewDidUnload
