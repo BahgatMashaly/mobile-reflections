@@ -8,6 +8,7 @@
 
 #import "CreateReflectionViewController.h"
 #import "Define.h"
+#import "BackgroundNoteViewController.h"
 
 @implementation CreateReflectionViewController
 
@@ -26,72 +27,8 @@
 	[self dismissModalViewControllerAnimated:NO];
 }
 
-- (void)hideToolbars
-{
-	for (UIView *view in viewFreeEditor.subviews)
-	{
-		if ([view tag] > 1000)
-		{
-			if ([view tag] < 2000)
-			{
-				for (UIView *sub in view.subviews)
-				{
-					if ([sub isKindOfClass:[UIToolbar class]] == TRUE || [sub isKindOfClass:[UIImageView class]] == TRUE)
-					{
-						[sub setHidden:YES];
-					}
-				}
-			}
-			if ([view tag] > 2000 && [view tag] < 4000)
-			{
-				for (UIView *sub in view.subviews)
-				{
-					if ([sub isKindOfClass:[UIToolbar class]] == TRUE || ([sub isKindOfClass:[UIImageView class]] == TRUE && [sub tag] == -1))
-					{
-						[sub setHidden:YES];
-					}
-				}
-			}
-		}
-	}
-	
-	if (paintnote_vc)
-	{
-		[paintnote_vc hideTools];
-	}
-}
-
-- (void)saveObjectContent:(int)aReflection_id
-{
-//	for (UIView *view in viewFreeEditor.subviews)
-//	{
-//		if ([view tag] > 1000)
-//		{
-//			if ([view tag] < 2000)
-//			{
-//				//save TextView to arrReflectionContent : id, reflection_id, objContent, objType
-//				TextNoteViewController *vc = [[TextNoteViewController alloc] init];
-//				vc.view = view;
-//				
-//				objText *objContent = [[objText alloc] initWithFrame:[view frame] content:[vc strContent] tag:[view tag] fontColor:[vc fontColor] fontName:[vc fontName] fontSize:[vc fontSize]];
-//				
-//				int max = [common findMax:[[appDelegate objOutput] arrReflectionContent]] + 1;
-//				NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [NSNumber numberWithInt:aReflection_id], objContent, @"TextView", nil];
-//				[[[appDelegate objOutput] arrReflectionContent] addObject:arrObject];
-//			}
-//		}
-//	}
-}
-
-- (void)editReflection:(int)aReflectionID
-{
-	isEditing = YES;
-	
-}
-
 - (IBAction)clickSave:(id)sender
 {
-	[self hideToolbars];
 	UIImage *img = [self renderToSave];
 	
 	//save image to docDir
@@ -117,8 +54,6 @@
 	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], [NSMutableArray arrayWithArray:m_ArrayComponents], nil];
 	[[[appDelegate objOutput] arrReflectionList] addObject:arrObject];
 	
-	//save objText to arrReflectionContent
-	[self saveObjectContent:max];
 
 	[self dismissModalViewControllerAnimated:NO];
 }
@@ -141,12 +76,10 @@
 
 - (IBAction)clickText:(id)sender
 {
-	viewIndex = viewIndex + 1;
 	CGRect frame = FRAME_REFLECTION_TEXT_NOTE;
 
 	TextNoteViewController *vc = [TextNoteViewController new];
 	[vc.view setFrame:frame];
-	[vc.view setTag:viewIndex];
 	[viewFreeEditor addSubview:vc.view];
     
     [m_ArrayComponents addObject:vc];
@@ -156,11 +89,7 @@
 
 - (IBAction)clickPostIt:(id)sender
 {
-	viewIndex = viewIndex + 1;
-	int vIndex = viewIndex + 4000;
-	
 	PostItViewController *vc = [PostItViewController new];
-	[vc.view setTag:vIndex];
 	[viewFreeEditor addSubview:vc.view];
     
     [m_ArrayComponents addObject:vc];
@@ -201,15 +130,16 @@
 		
 		if (x < xPos && y < yPos && x > xOri && y > yOri)
 		{
-			viewIndex = viewIndex + 1;
 			CGRect frame = CGRectMake(x - 20, y - 90, 400, 300);
 			
 			TextNoteViewController *vc = [TextNoteViewController new];
 			[vc.view setFrame:frame];
-			[vc.view setTag:viewIndex];
 			[viewFreeEditor addSubview:vc.view];
 			[vc fixPosition];
-			[vc.view release];
+            
+            [m_ArrayComponents addObject:vc];
+            
+            RELEASE_SAFE(vc);
 		}
 	}
 }
@@ -268,11 +198,7 @@
 	
 	for (UIView *view in viewFreeEditor.subviews)
 	{
-		if ([view tag] > 1000)
-		{
-			[view removeFromSuperview];
-			viewIndex = viewIndex - 1;
-		}
+		[view removeFromSuperview];
 	}
     
     [m_ArrayComponents removeAllObjects];
@@ -329,7 +255,6 @@
 	
 	appDelegate = (MobileJabberAppDelegate *)[[UIApplication sharedApplication] delegate];
     [txtTitle becomeFirstResponder];
-	viewIndex = 1000;
 }
 
 - (void)viewDidUnload
@@ -344,56 +269,40 @@
 	return(interfaceOrientation==UIInterfaceOrientationLandscapeLeft || interfaceOrientation==UIInterfaceOrientationLandscapeRight);
 }
 
-- (void)addPhotoNoteVC:(int)vIndex imgSource:(UIImage *)imgSource
-{
-	PhotoNoteViewController *vc = [PhotoNoteViewController new];
-	[vc.view setTag:vIndex];
-	[viewFreeEditor addSubview:vc.view];
-	[vc setSource:imgSource];
-    
-    [m_ArrayComponents addObject:vc];
-    
-	RELEASE_SAFE(vc);
-}
-
 - (void)deleteBackground
 {
-	for (UIView *view in viewFreeEditor.subviews)
+	for (UIViewController *viewController in m_ArrayComponents)
 	{
-		if ([view tag] > 4000)
-		{
-			[view removeFromSuperview];
-			viewIndex = viewIndex - 1;
-		}
+        if ([[viewController.class description] isEqualToString:[ARRAY_STRING_COMPONENTS objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS_MEMBER_BACKGROUND_NOTE]]) {
+            [viewController.view removeFromSuperview];
+        }
 	}
-}
-
-- (void)addBackground:(int)vIndex imgSource:(UIImage *)imgSource
-{
-	[self deleteBackground];
-
-	UIImageView *img = [[UIImageView alloc] initWithImage:imgSource];
-	[img setTag:vIndex];
-	[img setFrame:[viewFreeEditor bounds]];
-	[viewFreeEditor addSubview:img];
-	[viewFreeEditor sendSubviewToBack:img];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	//sourceType : 0=PhotoAlbum, 1=Camera, 2=video, 3=voice, 4=background
-	viewIndex = viewIndex + 1;
-	int vIndex = 0;
-	
 	if (sourceType == 0 || sourceType == 1)
 	{
-		vIndex = viewIndex + 1000;
-		[self addPhotoNoteVC:vIndex imgSource:[info objectForKey:UIImagePickerControllerOriginalImage]];
+        PhotoNoteViewController *photoNoteVC = [PhotoNoteViewController new];
+        [viewFreeEditor addSubview:photoNoteVC.view];
+        [photoNoteVC setSource:[info objectForKey:UIImagePickerControllerOriginalImage]];
+        
+        [m_ArrayComponents addObject:photoNoteVC];
+        
+        RELEASE_SAFE(photoNoteVC);
 	}
 	else if(sourceType == 4)
 	{
-		vIndex = viewIndex + (1000 * 4);
-		[self addBackground:vIndex imgSource:[info objectForKey:UIImagePickerControllerOriginalImage]];
+        [self deleteBackground];
+        
+        BackgroundNoteViewController *bgNoteVC = [[BackgroundNoteViewController alloc] initWithImage:[info objectForKey:UIImagePickerControllerOriginalImage]];
+        [viewFreeEditor addSubview:bgNoteVC.view];
+        [viewFreeEditor sendSubviewToBack:bgNoteVC.view];
+        
+        [m_ArrayComponents addObject:bgNoteVC];
+        
+        RELEASE_SAFE(bgNoteVC)
 	}
 	else if(sourceType == 2)
 	{
