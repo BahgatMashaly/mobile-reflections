@@ -215,6 +215,8 @@
 		D74D46EE152E0A0800A89711 /* EditReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46DE152E0A0800A89711 /* EditReflectionViewController.xib */; };
 		D74D46EF152E0A0800A89711 /* ReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46E1152E0A0800A89711 /* ReflectionViewController.m */; };
 		D74D46F0152E0A0800A89711 /* ReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */; };
+		D78B8112152E8DB600B904A5 /* BackgroundNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B8110152E8DB600B904A5 /* BackgroundNoteViewController.m */; };
+		D78B8116152E905400B904A5 /* BackgroundNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78B8115152E905300B904A5 /* BackgroundNoteViewController.xib */; };
 		D79E67DD152AFF8500CB1B8F /* SupportFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E67DC152AFF8500CB1B8F /* SupportFunction.m */; };
 		E3031FC013AA97BA00EB7DB4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3031FBE13AA97BA00EB7DB4 /* LoginViewController.m */; };
 		E3031FC113AA97BA00EB7DB4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3031FBF13AA97BA00EB7DB4 /* LoginViewController.xib */; };
@@ -758,6 +760,9 @@
 		D74D46E0152E0A0800A89711 /* ReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionViewController.h; sourceTree = "<group>"; };
 		D74D46E1152E0A0800A89711 /* ReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionViewController.m; sourceTree = "<group>"; };
 		D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReflectionViewController.xib; sourceTree = "<group>"; };
+		D78B810F152E8DB600B904A5 /* BackgroundNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundNoteViewController.h; sourceTree = "<group>"; };
+		D78B8110152E8DB600B904A5 /* BackgroundNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundNoteViewController.m; sourceTree = "<group>"; };
+		D78B8115152E905300B904A5 /* BackgroundNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundNoteViewController.xib; sourceTree = "<group>"; };
 		D79E67DA152AFF8500CB1B8F /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		D79E67DB152AFF8500CB1B8F /* SupportFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupportFunction.h; sourceTree = "<group>"; };
 		D79E67DC152AFF8500CB1B8F /* SupportFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupportFunction.m; sourceTree = "<group>"; };
@@ -1764,6 +1769,9 @@
 				D74D46D5152E0A0800A89711 /* TextNoteViewController.h */,
 				D74D46D6152E0A0800A89711 /* TextNoteViewController.m */,
 				D74D46D7152E0A0800A89711 /* TextNoteViewController.xib */,
+				D78B810F152E8DB600B904A5 /* BackgroundNoteViewController.h */,
+				D78B8110152E8DB600B904A5 /* BackgroundNoteViewController.m */,
+				D78B8115152E905300B904A5 /* BackgroundNoteViewController.xib */,
 			);
 			path = COMPONENTS;
 			sourceTree = "<group>";
@@ -3056,6 +3064,7 @@
 				D74D46EC152E0A0800A89711 /* CreateReflectionViewController.xib in Resources */,
 				D74D46EE152E0A0800A89711 /* EditReflectionViewController.xib in Resources */,
 				D74D46F0152E0A0800A89711 /* ReflectionViewController.xib in Resources */,
+				D78B8116152E905400B904A5 /* BackgroundNoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3212,6 +3221,7 @@
 				D74D46EB152E0A0800A89711 /* CreateReflectionViewController.m in Sources */,
 				D74D46ED152E0A0800A89711 /* EditReflectionViewController.m in Sources */,
 				D74D46EF152E0A0800A89711 /* ReflectionViewController.m in Sources */,
+				D78B8112152E8DB600B904A5 /* BackgroundNoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

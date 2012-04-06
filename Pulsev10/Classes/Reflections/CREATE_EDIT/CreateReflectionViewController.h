@@ -28,7 +28,6 @@
 	IBOutlet UIButton                       *btnPrivate;
 
 	BOOL                                    isPrivate;
-	int                                     viewIndex;
 	int                                     sourceType;	//0=PhotoAlbum, 1=Camera, 2=video, 3=voice, 4=background
 	
 	UIPopoverController                     *aPopover;
@@ -51,7 +50,5 @@
 - (IBAction)clickVideoImport:(id)sender;
 - (IBAction)clickChangeBackground:(id)sender;
 - (IBAction)clickClearAll:(id)sender;
-
-- (void)editReflection:(int)aReflectionID;
 
 @end
