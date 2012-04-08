@@ -100,11 +100,31 @@
 - (IBAction)clickVoiceImport:(id)sender
 {
 	sourceType = 3;
+    if (aPopover) [aPopover dismissPopoverAnimated:NO];
+	
+	m_ReflectionPopoverVC = [[ReflectionPopoverViewController alloc] initWithData:[NSMutableArray array] andDelegate:self];
+	
+	aPopover = [[UIPopoverController alloc] initWithContentViewController:m_ReflectionPopoverVC];
+	[aPopover setPopoverContentSize:m_ReflectionPopoverVC.view.frame.size];
+    RELEASE_SAFE(m_ReflectionPopoverVC);
+    
+	[aPopover setDelegate:self];
+	[aPopover presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 - (IBAction)clickVideoImport:(id)sender
 {
 	sourceType = 2;
+    if (aPopover) [aPopover dismissPopoverAnimated:NO];
+	
+	m_ReflectionPopoverVC = [[ReflectionPopoverViewController alloc] initWithData:[NSMutableArray array] andDelegate:self];
+	
+	aPopover = [[UIPopoverController alloc] initWithContentViewController:m_ReflectionPopoverVC];
+	[aPopover setPopoverContentSize:m_ReflectionPopoverVC.view.frame.size];
+    RELEASE_SAFE(m_ReflectionPopoverVC);
+    
+	[aPopover setDelegate:self];
+	[aPopover presentPopoverFromRect:[sender frame] inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 - (IBAction)clickChangeBackground:(id)sender
@@ -310,6 +330,12 @@
 	}
 	
 	[aPopover dismissPopoverAnimated:NO];
+}
+
+#pragma mark - Reflection Popover View Controller Protocol
+
+- (void)didSelectReflectionPopoeverCellOfArray:(NSMutableArray *)arrayData atIndex:(NSIndexPath *)indexPath {
+    
 }
 
 @end

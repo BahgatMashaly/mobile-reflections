@@ -17,10 +17,11 @@
 #import "PostItViewController.h"
 #import "ImageNoteViewController.h"
 #import "PhotoNoteViewController.h"
+#import "ReflectionPopoverViewController.h"
 
 #import "objText.h"
 
-@interface CreateReflectionViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, PaintNoteViewControllerDelegate>
+@interface CreateReflectionViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, PaintNoteViewControllerDelegate, ReflectionPopoverViewControllerProtocol>
 {
 	MobileJabberAppDelegate                 *appDelegate;
 	IBOutlet UIView                         *viewFreeEditor;
@@ -36,6 +37,8 @@
     NSMutableArray                          *m_ArrayComponents;
 	
 	BOOL                                    isEditing;
+    
+    ReflectionPopoverViewController         *m_ReflectionPopoverVC;
 }
 
 - (IBAction)clickPrivate:(id)sender;
