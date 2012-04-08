@@ -215,6 +215,12 @@
 		D74D46EE152E0A0800A89711 /* EditReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46DE152E0A0800A89711 /* EditReflectionViewController.xib */; };
 		D74D46EF152E0A0800A89711 /* ReflectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74D46E1152E0A0800A89711 /* ReflectionViewController.m */; };
 		D74D46F0152E0A0800A89711 /* ReflectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */; };
+		D7765AE51531A97200DFC009 /* AudioRecordNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7765AE31531A97200DFC009 /* AudioRecordNoteViewController.m */; };
+		D7765AE61531A97200DFC009 /* AudioRecordNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7765AE41531A97200DFC009 /* AudioRecordNoteViewController.xib */; };
+		D7765AEB1531A99C00DFC009 /* VideoRecordNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7765AE91531A99C00DFC009 /* VideoRecordNoteViewController.m */; };
+		D7765AEC1531A99C00DFC009 /* VideoRecordNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7765AEA1531A99C00DFC009 /* VideoRecordNoteViewController.xib */; };
+		D7765AF41531DBAA00DFC009 /* ReflectionPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7765AF21531DBA700DFC009 /* ReflectionPopoverViewController.m */; };
+		D7765AF51531DBAA00DFC009 /* ReflectionPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7765AF31531DBA900DFC009 /* ReflectionPopoverViewController.xib */; };
 		D78B8112152E8DB600B904A5 /* BackgroundNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78B8110152E8DB600B904A5 /* BackgroundNoteViewController.m */; };
 		D78B8116152E905400B904A5 /* BackgroundNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78B8115152E905300B904A5 /* BackgroundNoteViewController.xib */; };
 		D79E67DD152AFF8500CB1B8F /* SupportFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E67DC152AFF8500CB1B8F /* SupportFunction.m */; };
@@ -760,6 +766,15 @@
 		D74D46E0152E0A0800A89711 /* ReflectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionViewController.h; sourceTree = "<group>"; };
 		D74D46E1152E0A0800A89711 /* ReflectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionViewController.m; sourceTree = "<group>"; };
 		D74D46E2152E0A0800A89711 /* ReflectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReflectionViewController.xib; sourceTree = "<group>"; };
+		D7765AE21531A97200DFC009 /* AudioRecordNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRecordNoteViewController.h; sourceTree = "<group>"; };
+		D7765AE31531A97200DFC009 /* AudioRecordNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRecordNoteViewController.m; sourceTree = "<group>"; };
+		D7765AE41531A97200DFC009 /* AudioRecordNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioRecordNoteViewController.xib; sourceTree = "<group>"; };
+		D7765AE81531A99C00DFC009 /* VideoRecordNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecordNoteViewController.h; sourceTree = "<group>"; };
+		D7765AE91531A99C00DFC009 /* VideoRecordNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecordNoteViewController.m; sourceTree = "<group>"; };
+		D7765AEA1531A99C00DFC009 /* VideoRecordNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoRecordNoteViewController.xib; sourceTree = "<group>"; };
+		D7765AF11531DBA600DFC009 /* ReflectionPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionPopoverViewController.h; sourceTree = "<group>"; };
+		D7765AF21531DBA700DFC009 /* ReflectionPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionPopoverViewController.m; sourceTree = "<group>"; };
+		D7765AF31531DBA900DFC009 /* ReflectionPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReflectionPopoverViewController.xib; sourceTree = "<group>"; };
 		D78B810F152E8DB600B904A5 /* BackgroundNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundNoteViewController.h; sourceTree = "<group>"; };
 		D78B8110152E8DB600B904A5 /* BackgroundNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundNoteViewController.m; sourceTree = "<group>"; };
 		D78B8115152E905300B904A5 /* BackgroundNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundNoteViewController.xib; sourceTree = "<group>"; };
@@ -1772,6 +1787,15 @@
 				D78B810F152E8DB600B904A5 /* BackgroundNoteViewController.h */,
 				D78B8110152E8DB600B904A5 /* BackgroundNoteViewController.m */,
 				D78B8115152E905300B904A5 /* BackgroundNoteViewController.xib */,
+				D7765AE21531A97200DFC009 /* AudioRecordNoteViewController.h */,
+				D7765AE31531A97200DFC009 /* AudioRecordNoteViewController.m */,
+				D7765AE41531A97200DFC009 /* AudioRecordNoteViewController.xib */,
+				D7765AE81531A99C00DFC009 /* VideoRecordNoteViewController.h */,
+				D7765AE91531A99C00DFC009 /* VideoRecordNoteViewController.m */,
+				D7765AEA1531A99C00DFC009 /* VideoRecordNoteViewController.xib */,
+				D7765AF11531DBA600DFC009 /* ReflectionPopoverViewController.h */,
+				D7765AF21531DBA700DFC009 /* ReflectionPopoverViewController.m */,
+				D7765AF31531DBA900DFC009 /* ReflectionPopoverViewController.xib */,
 			);
 			path = COMPONENTS;
 			sourceTree = "<group>";
@@ -3065,6 +3089,9 @@
 				D74D46EE152E0A0800A89711 /* EditReflectionViewController.xib in Resources */,
 				D74D46F0152E0A0800A89711 /* ReflectionViewController.xib in Resources */,
 				D78B8116152E905400B904A5 /* BackgroundNoteViewController.xib in Resources */,
+				D7765AE61531A97200DFC009 /* AudioRecordNoteViewController.xib in Resources */,
+				D7765AEC1531A99C00DFC009 /* VideoRecordNoteViewController.xib in Resources */,
+				D7765AF51531DBAA00DFC009 /* ReflectionPopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3222,6 +3249,9 @@
 				D74D46ED152E0A0800A89711 /* EditReflectionViewController.m in Sources */,
 				D74D46EF152E0A0800A89711 /* ReflectionViewController.m in Sources */,
 				D78B8112152E8DB600B904A5 /* BackgroundNoteViewController.m in Sources */,
+				D7765AE51531A97200DFC009 /* AudioRecordNoteViewController.m in Sources */,
+				D7765AEB1531A99C00DFC009 /* VideoRecordNoteViewController.m in Sources */,
+				D7765AF41531DBAA00DFC009 /* ReflectionPopoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3244,7 +3274,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Paul Mitchell (4AVVV76665)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3254,7 +3285,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = MobileJabber;
-				PROVISIONING_PROFILE = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = /usr/include/libxml2;
 			};
@@ -3265,8 +3297,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Paul Mitchell (4AVVV76665)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paul Mitchell (4AVVV76665)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MobileJabber_Prefix.pch;
@@ -3274,8 +3306,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = MobileJabber;
-				PROVISIONING_PROFILE = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3306,8 +3338,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Paul Mitchell (4AVVV76665)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paul Mitchell (4AVVV76665)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MobileJabber_Prefix.pch;
@@ -3315,8 +3347,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = MobileJabber;
-				PROVISIONING_PROFILE = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3386,8 +3418,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Paul Mitchell (4AVVV76665)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Paul Mitchell (4AVVV76665)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MobileJabber_Prefix.pch;
@@ -3395,8 +3427,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = MobileJabber;
-				PROVISIONING_PROFILE = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
-				"PROVISIONING_PROFILE[sdk=*]" = "18F8C721-B8D3-4F4B-B8A8-627F1FB8AB34";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};

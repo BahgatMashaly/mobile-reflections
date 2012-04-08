@@ -260,6 +260,12 @@
 	return(interfaceOrientation==UIInterfaceOrientationLandscapeLeft || interfaceOrientation==UIInterfaceOrientationLandscapeRight);
 }
 
+#pragma mark - Edit Reflection View Controller Protocol
+
+- (void)reloadReflectionListAtIndex:(NSIndexPath *)indexPath {
+    [tblReflectionList reloadData];
+}
+
 #pragma mark -
 #pragma mark - Table view data source
 
@@ -365,7 +371,7 @@
     
     // MinhPB 2012/04/04
     RELEASE_SAFE(m_EditVC);
-    m_EditVC = [[EditReflectionViewController alloc] initWithFrame:imgContent.frame andArrayData:[item objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS]];
+    m_EditVC = [[EditReflectionViewController alloc] initWithFrame:imgContent.frame andArrayData:[item objectAtIndex:ENUM_INDEX_REFLECTION_DATA_COMPONENTS] andTitle:[item objectAtIndex:ENUM_INDEX_REFLECTION_DATA_TITILE] andDelegate:self atIndex:indexPath];
     [self.view addSubview:m_EditVC.view];
 }
 

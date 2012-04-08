@@ -18,10 +18,15 @@
 #import "ImageNoteViewController.h"
 #import "PhotoNoteViewController.h"
 #import "BackgroundNoteViewController.h"
+#import "ReflectionPopoverViewController.h"
 
 #import "objText.h"
 
-@interface EditReflectionViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, PaintNoteViewControllerDelegate>
+@protocol EditReflectionViewControllerProtocol <NSObject>
+- (void)reloadReflectionListAtIndex:(NSIndexPath *)indexPath;
+@end
+
+@interface EditReflectionViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, PaintNoteViewControllerDelegate, ReflectionPopoverViewControllerProtocol>
 {
 	MobileJabberAppDelegate             *appDelegate;
 	IBOutlet UIView                     *viewFreeEditor;
@@ -39,8 +44,11 @@
     CGRect                              m_RectFrame;
     
 	BOOL                                isEditing;
+    NSIndexPath                         *m_IndexPath;
+    id <EditReflectionViewControllerProtocol>               m_Delegate;
+    NSString                            *m_Title;
 }
-- (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array;
+- (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array andTitle:(NSString *)strTitle andDelegate:(id)delegate atIndex:(NSIndexPath *)indexPath;
 - (void)loadViewWithOldArray;
 - (void)addNewComponentView:(UIView *)view;
 

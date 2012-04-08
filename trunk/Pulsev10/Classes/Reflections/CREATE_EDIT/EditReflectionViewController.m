@@ -11,12 +11,15 @@
 
 @implementation EditReflectionViewController
 
-- (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array {
+- (id)initWithFrame:(CGRect)rect andArrayData:(NSMutableArray *)array andTitle:(NSString *)strTitle andDelegate:(id)delegate atIndex:(NSIndexPath *)indexPath {
     self = [super init];
     if (self) {
         // Custom initialization
         appDelegate = (MobileJabberAppDelegate *)[[UIApplication sharedApplication] delegate];
         m_RectFrame = rect;
+        m_IndexPath = [indexPath retain];
+        m_Delegate = delegate;
+        m_Title = [strTitle retain];
         
         m_ArrayOldComponents = [[NSMutableArray alloc] initWithArray:array];
         m_ArrayNewComponents = [NSMutableArray new];
@@ -46,7 +49,38 @@
 
 - (IBAction)clickSave:(id)sender
 {
+	UIImage *img = [self renderToSave];
+	
+	//save image to docDir
+	NSString *imagePath = @"";
+	if ([img isKindOfClass:[UIImage class]])
+	{
+		NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+		imagePath = [NSString stringWithFormat:@"%@/img_%@.png",docDir, [NSDate date]];
+		
+		NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(img)];
+		[data1 writeToFile:imagePath atomically:YES];
+		//NSLog(@"image path : %@", imagePath);
+	}
+	
+	//save to arrReflectionList : id, title, image, private, date, user_id
+	NSDate *date = [NSDate date];
+	NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+	[dateFormat setDateFormat:@"EEEE MMMM d, YYYY"]; //example : Saturday November 22, 2008
+	NSString *aDate = [dateFormat stringFromDate:date];  
+	[dateFormat release];
+    
+	int max = [common findMax:[[appDelegate objOutput] arrReflectionList]] + 1;
+    
+    self.view.frame = FRAME(0, 0, HEIGHT_IPAD, WIDTH_IPAD - HEIGHT_STATUS_BAR);self.view.frame = FRAME(0, 0, HEIGHT_IPAD, WIDTH_IPAD - HEIGHT_STATUS_BAR);
+	NSArray *arrObject = [[NSArray alloc] initWithObjects:[NSNumber numberWithInt:max], [txtTitle text], imagePath, [NSNumber numberWithBool:isPrivate], aDate, [appDelegate strUserName], [NSMutableArray arrayWithArray:m_ArrayNewComponents], nil];
+    
+	[[[appDelegate objOutput] arrReflectionList] replaceObjectAtIndex:m_IndexPath.row withObject:arrObject];
+	if ([m_Delegate respondsToSelector:@selector(reloadReflectionListAtIndex:)]) {
+        [m_Delegate reloadReflectionListAtIndex:m_IndexPath];
+    }
 
+	[self dismissModalViewControllerAnimated:NO];
 }
 
 - (void)browsePhotoAlbum:(id)sender
@@ -242,6 +276,8 @@
     [m_ArrayOldComponents removeAllObjects];
     RELEASE_SAFE(m_ArrayOldComponents);
     RELEASE_SAFE(m_ArrayNewComponents);
+    RELEASE_SAFE(m_IndexPath);
+    RELEASE_SAFE(m_Title);
     
 	[super dealloc];
 }
@@ -311,6 +347,7 @@
     [super viewDidLoad];
     
     [self loadViewWithOldArray];
+    txtTitle.text = m_Title;
 }
 
 - (void)viewDidUnload {
@@ -377,6 +414,12 @@
 	}
 	
 	[aPopover dismissPopoverAnimated:NO];
+}
+
+#pragma mark - Reflection Popover View Controller Protocol
+
+- (void)didSelectReflectionPopoeverCellOfArray:(NSMutableArray *)arrayData atIndex:(NSIndexPath *)indexPath {
+    
 }
 
 @end

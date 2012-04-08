@@ -19,7 +19,7 @@
 
 #import "ReflectionCell.h"
 
-@interface ReflectionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPopoverControllerDelegate, KLCalendarViewDelegate>
+@interface ReflectionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPopoverControllerDelegate, KLCalendarViewDelegate, EditReflectionViewControllerProtocol>
 {
 	MobileJabberAppDelegate                     *appDelegate;
 
